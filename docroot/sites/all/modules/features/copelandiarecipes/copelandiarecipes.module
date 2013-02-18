@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Code for the Recipes feature.
+ */
+
+include_once 'copelandiarecipes.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function copelandiarecipes_form_recipe_node_form_alter(&$form, &$form_state) {
+  $form['#attached']['css'][] = drupal_get_path('module', 'copelandiarecipes') . '/copelandiarecipes.css';
+}

@@ -1,0 +1,13 @@
+/**
+ * @file
+ * CSS for Recipes feature.
+ */
+.field-name-field-recipe-ingredients .field-type-text {
+    float: left;
+    margin-left: 20px;
+}
+
+.field-name-field-recipe-ingredients table .form-submit {
+    float: right;
+    margin-top: 18px;
+}

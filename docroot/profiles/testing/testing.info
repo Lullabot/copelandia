@@ -1,0 +1,11 @@
+name = Testing
+description = Minimal profile for running tests. Includes absolutely required modules only.
+version = VERSION
+core = 7.x
+hidden = TRUE
+
+; Information added by drupal.org packaging script on 2013-01-16
+version = "7.19"
+project = "drupal"
+datestamp = "1358374870"
+
