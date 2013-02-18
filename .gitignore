@@ -37,6 +37,10 @@ docroot/sites/*/private
 *.sql
 *.sqlite
 
+# IDE Generated Files #
+#######################
+.idea/*
+
 # OS generated files #
 ######################
 .DS_Store*
