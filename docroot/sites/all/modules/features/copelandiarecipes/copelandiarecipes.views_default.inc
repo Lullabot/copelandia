@@ -48,10 +48,11 @@ function copelandiarecipes_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<p>Checkout out the recipes that have been submitted thus far. And add your own!</p>
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p>Checkout out the recipes that have been submitted thus far and add your own!</p>
 
 <ul class="action-links">
-<li><a href="node/add/recipe">Add Recipe</a></li>
+<li><a href="node/add/recipe">Add a Recipe</a></li>
 </ul>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
