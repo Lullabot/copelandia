@@ -1,10 +1,5 @@
 'use strict';
 
-angular.module('angularjsApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Testacular'
-    ];
-  });
+function RecipeCtrl($scope, Nodes, Node) {
+  $scope.recipes = Nodes.get();
+};
