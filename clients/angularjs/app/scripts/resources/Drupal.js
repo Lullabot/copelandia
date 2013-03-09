@@ -15,11 +15,7 @@ angular
       }
 
       return Node;
-  })
-  .config(["$httpProvider", function(provider) {
-    // todo: figure out csrf
-    // provider.defaults.headers.common['X-CSRF-Token'] = Drupal.settings.restws_csrf_token;
-  }]);
+  });
 
 angular
   .module('nodes', ['ngResource'])
