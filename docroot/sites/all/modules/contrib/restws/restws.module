@@ -130,6 +130,10 @@ function restws_handle_request($op, $format, $resource_name, $id = NULL, $payloa
     $access_op = $op == 'query' ? 'view' : $op;
 
     if (user_access('access resource ' . $resource_name) && $resource->access($access_op, $id)) {
+      drupal_add_http_header('Access-Control-Allow-Origin', '*');
+      drupal_add_http_header('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS');
+      drupal_add_http_header('Access-Control-Allow-Credentials', 'true');
+      drupal_add_http_header('Access-Control-Allow-Headers', 'Authorization, Origin, Content-Type, X-CSRF-Token');
       try {
         $method = $op . 'Resource';
         if ($op == 'create') {
