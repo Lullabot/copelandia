@@ -1,0 +1,12 @@
+name = CORS
+description = Allows Cross-origin resource sharing.
+package = Other
+core = 7.x
+files[] = cors.module
+
+; Information added by drupal.org packaging script on 2013-03-24
+version = "7.x-1.0"
+core = "7.x"
+project = "cors"
+datestamp = "1364142911"
+
