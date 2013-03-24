@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Allows Cross-origin resource sharing.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function cors_menu() {
+  $items = array();
+
+  $items['admin/config/services/cors'] = array(
+    'title' => 'CORS',
+    'description' => 'Enable Cross-origin resource sharing',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cors_admin_form'),
+    'access arguments' => array('Administer site configuration'),
+  );
+
+  return $items;
+}
+
+/**
+ * CORS admin configuration form.
+ */
+function cors_admin_form($form, &$form_state) {
+  $form = array();
+
+  $cors_domains = '';
+  foreach (variable_get('cors_domains', array()) as $path => $domain) {
+    $cors_domains .= $path . '|' . $domain . "\n";
+  }
+
+  $form['cors_domains'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Domains'),
+    '#description' => t('A list of paths and corresponding domains to enable for CORS. Enter one value per line separated by a pipe e.g.
+    <ul>
+      <li>*|http://example.com</li>
+      <li>api|http://example.com:8080 http://example.com</li>
+      <li>api/*|https://example.com</li>
+    </ul>'),
+    '#default_value' => $cors_domains,
+    '#rows' => 10,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save configuration'),
+  );
+
+  return $form;
+}
+
+/**
+ * CORS admin configuration form submit.
+ */
+function cors_admin_form_submit($form, &$form_state) {
+  $domains = explode("\n", $form_state['values']['cors_domains'], 2);
+  $settings = array();
+  foreach ($domains as $domain) {
+    $domain = explode("|", $domain, 2);
+    if (count($domain) === 2) {
+      $settings[$domain[0]] = (isset($settings[$domain[0]])) ? $settings[$domain[0]] . ' ' : '';
+      $settings[$domain[0]] .= trim(drupal_strtolower($domain[1]));
+    }
+  }
+
+  variable_set('cors_domains', $settings);
+}
+
+/**
+ * Implements hook_init().
+ */
+function cors_init() {
+  $domains = variable_get('cors_domains', array());
+  $current_path = drupal_strtolower(drupal_get_path_alias($_GET['q']));
+  $allowed_domains = '';
+  foreach ($domains as $path => $domain) {
+    $page_match = drupal_match_path($current_path, $path);
+    if ($current_path != $_GET['q']) {
+      $page_match = $page_match || drupal_match_path($_GET['q'], $path);
+    }
+    if ($page_match) {
+      $allowed_domains .= $domain . ' ';
+    }
+  }
+  $allowed_domains = trim($allowed_domains);
+  if (strlen($allowed_domains) > 0) {
+    drupal_add_http_header('Access-Control-Allow-Origin', $allowed_domains, TRUE);
+  }
+}
+
