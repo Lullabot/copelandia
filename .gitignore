@@ -47,3 +47,8 @@ docroot/sites/*/private
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Protobots compiled files #
+############################
+wireframe/.sass-cache
+wireframe/public/css
