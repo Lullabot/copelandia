@@ -21,9 +21,7 @@ angular
   .module('nodes', ['ngResource'])
   .factory('Nodes', function($resource) {
     var Node = $resource(
-      url + '/node.json', 
-      {}, 
-      {get: {method: 'JSONP'}}
+      url + '/node.json'
     );
 
     return Node;
