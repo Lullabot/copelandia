@@ -1,0 +1,30 @@
+
+<div id="page">
+
+  <header id="header" role="banner">
+    <%= yield :header %>
+  </header>
+
+  <div id="main" role="main">
+     <div id="content" role="article">
+      <%= yield %>
+      <%= yield :content %>
+     </div>
+    <% if content_for? :sidebar_first %>
+    <aside id="sidebar-first" role="complementary">
+      <%= yield :sidebar_first %>
+    </aside>
+
+    <% if content_for? :sidebar_second %>
+    <aside id="sidebar-second" role="complementary">
+      <%= yield :sidebar_second %>
+    </aside>
+  </div> <!-- /#main -->
+
+  <footer id="footer" role="contentinfo">
+    <%= yield :footer %>
+  </footer>
+
+</div><!-- /#page -->
+
+
