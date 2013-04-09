@@ -1,14 +1,18 @@
 <%
-@bodyclass = ''
+@bodyclass = 'class'
 %>
 
 
 <% content_for :header do %>
+<%= render "components/logo" %>
 
 <% end %>
 
-<% content_for :content do %>
-
+<% content_for :main_content do %>
+<%= render "components/recipe_filter" %>
+<%= render "components/submit_recipe" %>
+<%= render "components/recipe_teaser" %>
+<%= render "components/load_more_button" %>
 <% end %>
 
 <% content_for :sidebar_primary do %>
