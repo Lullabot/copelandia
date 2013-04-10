@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 100%; }
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative; }
+
+a:focus {
+  outline: none; }
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  direction: ltr; }
+
+/* Default Link Styles */
+a {
+  color: #2ba6cb;
+  text-decoration: none;
+  line-height: inherit; }
+  a:hover, a:focus {
+    color: #2795b6; }
+  a img {
+    border: none; }
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  text-rendering: optimizeLegibility; }
+  p aside {
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2125em; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #6f6f6f;
+    line-height: 0; }
+
+h1 {
+  font-size: 2.125em; }
+
+h2 {
+  font-size: 1.6875em; }
+
+h3 {
+  font-size: 1.375em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1.125em; }
+
+h6 {
+  font-size: 1em; }
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25em 0 1.1875em;
+  height: 0; }

@@ -1,0 +1,27 @@
+$column-width: 5em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+#page {
+  @include container;
+}
+
+#header {
+  @include container;
+}
+
+#main {
+  @include container;
+}
+
+#sidebar-first {
+  @include container;
+}
+
+#sidebar-second {
+  @include container;
+}
+
+#footer {
+  @include container;
+}
