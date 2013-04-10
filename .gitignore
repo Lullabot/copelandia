@@ -40,6 +40,8 @@ docroot/sites/*/private
 # IDE Generated Files #
 #######################
 .idea/*
+*.sublime-project
+*.sublime-workspace
 
 # OS generated files #
 ######################
