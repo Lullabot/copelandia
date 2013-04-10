@@ -10,11 +10,11 @@
       <%= yield :main_content %>
      </div>
 
-    <% if content_for? :sidebar_first %>
+
     <aside id="sidebar-first" role="complementary">
       <%= yield :sidebar_first %>
     </aside>
-    <% end %>
+
 
     <% if content_for? :sidebar_second %>
     <aside id="sidebar-second" role="complementary">

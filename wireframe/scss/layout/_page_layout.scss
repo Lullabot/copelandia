@@ -1,3 +1,4 @@
+$column-count: 12;
 $column-width: 5em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
@@ -14,12 +15,16 @@ $grid-padding: $gutter-width;
   @include container;
 }
 
+#content {
+
+}
+
 #sidebar-first {
-  @include container;
+
 }
 
 #sidebar-second {
-  @include container;
+
 }
 
 #footer {
