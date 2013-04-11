@@ -4,11 +4,11 @@ $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
 #page {
-  @include container;
+  //@include container;
 }
 
 #header {
-  @include container;
+  //@include container;
 }
 
 #main {
@@ -28,5 +28,5 @@ $grid-padding: $gutter-width;
 }
 
 #footer {
-  @include container;
+  
 }

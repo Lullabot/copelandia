@@ -1,0 +1,16 @@
+footer{
+	background: #e7e7e7;
+	margin-top:2em;
+	.footer-links{
+		@include container;
+	ul{
+		padding:2em 0;
+		list-style:none;
+		li{
+			display:inline-block;
+			margin-right:2em;
+		}
+	}	
+	}
+	
+}
