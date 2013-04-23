@@ -1,5 +1,5 @@
 <div class="hero-unit">
-  <ol>
-      <li ng-repeat="recipe in recipes.list">{{recipe.title}}</li>
-  </ol>
+  <ul>
+    <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">{{recipe.title}}</li>
+  </ul>
 </div>

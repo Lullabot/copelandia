@@ -26,7 +26,25 @@
     <!-- Add your site or application content here -->
     <div class="navbar">
       <div class="navbar-inner">
-        <a href="/" class="brand">Robot Cafe</a>
+        <a href="/" class="brand">Red Robot Cafe</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span6">
+           <p>Welcome to the Cafe</p>
+        </div>
+        <div class="span6 pull-right">
+
+          <div class="well well-small">
+              <form class="form-horizontal">
+              <span class="">Filter:</span>
+              <input type="text" placeholder="Recipe Title" class="input-medium search-query" ng-model='recipe.title' /><br/>
+              <span class="label">Filtering On: {{recipe.title}}</span>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -43,7 +61,7 @@
     <!-- // <script src="scripts/resources/Drupal.js"></script> -->
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
