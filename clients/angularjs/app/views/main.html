@@ -9,7 +9,9 @@
 
   <ul class="recipe-teasers small-block-grid-2 large-block-grid-4">
     <li class="recipe-teaser" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
-      <img src="http://lorempixel.com/500/500/food">
+      <!-- we should use css for this instead of an image tag -->
+      <!-- also this doesn't quite work with filtering since the index changes -->
+      <img src="{{images[$index]}}">
       <h2>{{recipe.title}}</h2>
       <aside class="comments">
         <span class="comment-count">5</span>
