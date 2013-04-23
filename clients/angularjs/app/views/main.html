@@ -11,6 +11,7 @@
     <li class="recipe-teaser" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
       <!-- we should use css for this instead of an image tag -->
       <!-- also this doesn't quite work with filtering since the index changes -->
+      <!-- <img src="http://lorempixel.com/500/500/food"> -->
       <img src="{{images[$index]}}">
       <h2>{{recipe.title}}</h2>
       <aside class="comments">
