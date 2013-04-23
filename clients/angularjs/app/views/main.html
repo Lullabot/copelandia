@@ -1,24 +1,28 @@
+<div class="panel row radius">
+  <div class="small-2 columns">
+    <label>Filtering On: </label>
+  </div>
+  <div class="small-10 columns">
+    <span class="alert-box secondary">{{recipe.title}}</span>
+  </div>
+</div>
+
 <div class="panel row">
 
-  <div class="small-3">
-    <label>Filtering On: </label>
-    <span id="right-label">{{recipe.title}}</span>
-  </div>
-
-  <br/>
-
-  <ul class="recipe-teasers small-block-grid-2 large-block-grid-4">
-    <li class="recipe-teaser" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
-      <!-- we should use css for this instead of an image tag -->
-      <!-- also this doesn't quite work with filtering since the index changes -->
-      <!-- <img src="http://lorempixel.com/500/500/food"> -->
-      <img src="{{images[$index]}}">
-      <h2>{{recipe.title}}</h2>
-      <aside class="comments">
-        <span class="comment-count">5</span>
-        <a href="#">Comments</a>
-        <span class="rating">###00</span>
-      </aside>
+  <ul class="small-block-grid-2 large-block-grid-4">
+    <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
+      <div class="recipe-teaser">
+        <!-- we should use css for this instead of an image tag -->
+        <!-- also this doesn't quite work with filtering since the index changes -->
+        <!-- <img src="http://lorempixel.com/500/500/food"> -->
+        <img src="{{images[$index]}}">
+        <h2>{{recipe.title}}</h2>
+        <aside class="comments">
+          <span class="comment-count">5</span>
+          <a href="#">Comments</a>
+          <span class="rating">###00</span>
+        </aside>
+      </div>
     </li>
   </ul>
 
