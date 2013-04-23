@@ -2,9 +2,13 @@
 	margin-bottom:1em;
 	background: #e7e7e7;
 	position: relative;
+	/* tempoaray so we can see the image placeholder */
+	min-height: 300px;
 	img{
 		width: 100%;
-		height: auto;
+		/* tempoaray so we can see the image placeholder */
+		min-height: 250px;
+		background: #fff;
 	}
 	h2{
 		font-size: 1em;
