@@ -1,7 +1,26 @@
 <div class="hero-unit">
-  <span>Filtering On: <span class="label">{{recipe.title}}</span></span>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <label>Filtering On: </label>
+    </div>
+    <div class="span2">
+      <span class="label">{{recipe.title}}</span>
+    </div>
+  </div>
+
   <br/>
-  <ul>
-    <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">{{recipe.title}}</li>
-  </ul>
+
+  <div class="recipe-teasers row-fluid">
+    <div class="recipe-teaser span4" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
+      <img src="http://lorempixel.com/500/500/food">
+      <h2>{{recipe.title}}</h2>
+      <aside class="comments">
+        <span class="comment-count">5</span>
+        <a href="#">Comments</a>
+        <span class="rating">###00</span>
+      </aside>
+    </div>
+  </div>
+
 </div>
