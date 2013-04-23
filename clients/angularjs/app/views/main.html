@@ -12,10 +12,10 @@
   <br/>
 
   <div class="recipe-teasers row-fluid">
-    <div class="recipe-teaser span4" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
+    <div class="recipe-teaser span4" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe" ng-init="getImages(recipes)">
       <!-- we should use css for this instead of an image tag -->
       <!-- also this doesn't quite work with filtering since the index changes -->
-      <img src="{{images[$index]}}">
+      <img src="{{recipe.image.url}}">
       <h2>{{recipe.title}}</h2>
       <aside class="comments">
         <span class="comment-count">5</span>
