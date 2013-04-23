@@ -1,4 +1,6 @@
 <div class="hero-unit">
+  <span>Filtering On: <span class="label">{{recipe.title}}</span></span>
+  <br/>
   <ul>
     <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">{{recipe.title}}</li>
   </ul>
