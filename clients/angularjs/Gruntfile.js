@@ -118,6 +118,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
+          config: '.config.rb',
           debugInfo: true
         }
       }
