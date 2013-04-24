@@ -116,6 +116,11 @@ module.exports = function (grunt) {
           force: true
         }
       },
+      server: {
+        options: {
+          debugInfo: true
+        }
+      }
     },
     concat: {
       dist: {
