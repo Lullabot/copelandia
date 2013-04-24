@@ -2,16 +2,12 @@
 	margin-bottom:1em;
 	background: #e7e7e7;
 	position: relative;
-	/* tempoaray so we can see the image placeholder */
-	min-height: 300px;
 	img{
-		width: 100%;
-		/* tempoaray so we can see the image placeholder */
-		min-height: 250px;
-		background: #fff;
+		width: 100%; 
+		height: auto;
 	}
 	h2{
-		font-size: 1em;
+		font-size: 1.375em;
 		text-align: center;
 		position: absolute;
 		bottom: 20%;
@@ -21,6 +17,6 @@
 		background:	rgba(255, 255, 255, 0.75)
 	}
 	.comments{
-	padding:.5em 2em;
+	padding:.5em 2em;	
 	}
 }

@@ -1,0 +1,13 @@
+.recipe-teaser{
+	@include respond-to($small, $medium) {
+		@include span-columns(6);
+		@include nth-omega(2n);
+	}
+	@include respond-to($medium) {
+		@include span-columns(4);
+		@include nth-omega(3n);
+	}
+	.rating{
+		float: right;
+	}
+}

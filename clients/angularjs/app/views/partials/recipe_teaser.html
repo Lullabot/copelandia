@@ -1,0 +1,13 @@
+<ul class="recipe-teasers">
+    <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe" ng-init="getImages(recipes)">
+      <div class="recipe-teaser">
+        <img src="{{recipe.image.url}}">
+        <h2>{{recipe.title}}</h2>
+        <aside class="comments">
+          <span class="comment-count">5</span>
+          <a href="#">Comments</a>
+          <span class="rating">###00</span>
+        </aside>
+      </div>
+    </li>
+  </ul>
