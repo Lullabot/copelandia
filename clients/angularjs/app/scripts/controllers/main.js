@@ -5,7 +5,6 @@ function recipeController($scope, Node, Nodes, File) {
   $scope.cache = {};
 
   var recipes = $scope.recipes = Nodes.get();
-  console.log(recipes);
   
   $scope.getImages = function(recipes) {
     for (var i = recipes.list.length - 1; i >= 0; i--) {
