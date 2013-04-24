@@ -234,3 +234,6 @@
 // to the command (e.g. /bin/grep).
 # $command_specific['core-cli'] = array('override' => 'help,dd,sa');
 
+// Shell aliases.
+$options['shell-aliases']['syncdb'] = '!drush sql-drop -y && drush sql-sync --yes @cp.dev @self';
+$options['shell-aliases']['syncfiles'] = '!drush --verbose --yes rsync @cp.dev:%files/ @self:%files';
