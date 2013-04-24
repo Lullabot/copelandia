@@ -4,7 +4,9 @@ angular.module('app', ['resource.nodes', 'resource.node', 'resource.file']).
 
   config(function($routeProvider) {
     $routeProvider.
-      when('/', {}).
+      when('/', {
+        templateUrl: 'views/main.html'
+      }).
       otherwise({
         redirectTo: '/'
       });
