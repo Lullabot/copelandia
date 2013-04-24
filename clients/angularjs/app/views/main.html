@@ -1,53 +1,21 @@
 
+<img src="http://placehold.it/1600x450&text=Red Robot Kitchen">
 
-    <div class="row">
-      <div class="small-4 columns">
-         <p>Welcome to the Cafe</p>
-      </div>
-      <div class="small-4 columns">
-        <form>
-          <div class="row">
-            <div class="small-8">
-              <div class="row">
-                <div class="small-3 columns">
-                  <label for="right-label" class="right inline">Filter:</label>
-                </div>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="Recipe Title" id="right-label" class="input-medium search-query" ng-model='recipe.title' />
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    
-<div class="panel row radius">
-  <div class="small-2 columns">
-    <label>Filtering On: </label>
-  </div>
-  <div class="small-10 columns">
-    <span class="alert-box secondary">{{recipe.title}}</span>
-  </div>
-</div>
 
-<div class="panel row">
-  
-  <ul class="small-block-grid-2 large-block-grid-4">
-    <li ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe" ng-init="getImages(recipes)">
-      <div class="recipe-teaser">
-        <!-- we should use css for this instead of an image tag -->
-        <!-- also this doesn't quite work with filtering since the index changes -->
-        <!-- <img src="http://lorempixel.com/500/500/food"> -->
-        <img src="{{recipe.image.url}}">
-        <h2>{{recipe.title}}</h2>
-        <aside class="comments">
-          <span class="comment-count">5</span>
-          <a href="#">Comments</a>
-          <span class="rating">###00</span>
-        </aside>
-      </div>
-    </li>
-  </ul>
 
-</div>
+<ng-include
+       src="'/views/partials/recipe_filter.html'">
+     </ng-include>
+<ng-include
+       src="'/views/partials/submit_recipe.html'">
+     </ng-include>
+<ng-include
+       src="'/views/partials/recipe_teaser.html'">
+     </ng-include>
+<ng-include
+       src="'/views/partials/load_more_button.html'">
+     </ng-include>
+<ng-include
+       src="'/views/partials/footer.html'">
+     </ng-include>
+

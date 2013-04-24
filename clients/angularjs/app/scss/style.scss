@@ -1,5 +1,8 @@
-@import "components/_recipe-teaser";
-
-body {
- background: #f0f0f0;
-}
+@import "compass";
+@import "susy";
+@import "global/functions";
+@import "global/mixins";
+@import "global/variables";
+@import "layout/**/*";
+@import "wireframe/**/*";
+@import "components/**/*";

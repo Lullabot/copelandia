@@ -1,0 +1,15 @@
+$small: 500px;
+$medium: 800px;
+
+
+@mixin respond-to($primary, $secondary:min-width) {
+  @if $secondary == max-width {
+    @media screen and (max-width: $primary - 1) { @content; }
+  }
+  @else if $secondary == min-width {
+    @media screen and (min-width: $primary) { @content; }
+  }
+  @else {
+    @media screen and (min-width: $primary) and (max-width: $secondary - 1) { @content; }
+  }
+}

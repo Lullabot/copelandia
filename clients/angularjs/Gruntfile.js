@@ -110,18 +110,12 @@ module.exports = function (grunt) {
       }
     },
     compass: {
-      options: {
-        sassDir: '<%= yeoman.app %>/scss',
-        cssDir: '<%= yeoman.app %>/css',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: '<%= yeoman.app %>/components',
-        relativeAssets: true,
-        force: true,
-        require: 'zurb-foundation'
+      dist: {
+        options: {
+          config: '.config.rb',
+          force: true
+        }
       },
-      dist: {},
       server: {
         options: {
           debugInfo: true
