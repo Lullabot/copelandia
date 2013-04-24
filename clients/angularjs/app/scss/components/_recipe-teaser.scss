@@ -1,22 +1,27 @@
-.recipe-teaser{
-	margin-bottom:1em;
-	background: #e7e7e7;
-	position: relative;
-	img{
-		width: 100%; 
-		height: auto;
+.recipe-teasers {
+	li {
+		list-style: none;
 	}
-	h2{
-		font-size: 1.375em;
-		text-align: center;
-		position: absolute;
-		bottom: 20%;
-		left: 0;
-		right: 0;
-		padding: .5em;
-		background:	rgba(255, 255, 255, 0.75)
-	}
-	.comments{
-	padding:.5em 2em;	
+	.recipe-teaser{
+		margin-bottom:1em;
+		background: #e7e7e7;
+		position: relative;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		h2{
+			font-size: 1.375em;
+			text-align: center;
+			position: absolute;
+			bottom: 20%;
+			left: 0;
+			right: 0;
+			padding: .5em;
+			background:	rgba(255, 255, 255, 0.75)
+		}
+		.comments{
+		padding:.5em 2em;
+		}
 	}
 }
