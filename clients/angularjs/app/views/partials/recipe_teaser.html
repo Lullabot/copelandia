@@ -1,5 +1,5 @@
 <ul class="recipe-teasers">
-  <li class="recipe-teaser" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
+  <li class="recipe-teaser" data-ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
     <div>
       <img src="{{getImage(recipe)}}">
       <h2>{{recipe.title}}</h2>
