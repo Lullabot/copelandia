@@ -1,3 +1,4 @@
+
 .recipe-teaser{
 	@include respond-to($small, $medium) {
 		@include span-columns(6);
