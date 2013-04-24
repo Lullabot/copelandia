@@ -1,21 +1,25 @@
+<header>
+  <img src="http://placehold.it/1600x450&text=Red Robot Kitchen">
+</header>
 
-<img src="http://placehold.it/1600x450&text=Red Robot Kitchen">
+<div id="main">
+  <ng-include
+         src="'/views/partials/recipe_filter.html'">
+       </ng-include>
+  <ng-include
+         src="'/views/partials/submit_recipe.html'">
+       </ng-include>
+  <ng-include
+         src="'/views/partials/recipe_teaser.html'">
+       </ng-include>
+  <ng-include
+         src="'/views/partials/load_more_button.html'">
+       </ng-include>
+</div>
 
-
-
-<ng-include
-       src="'/views/partials/recipe_filter.html'">
-     </ng-include>
-<ng-include
-       src="'/views/partials/submit_recipe.html'">
-     </ng-include>
-<ng-include
-       src="'/views/partials/recipe_teaser.html'">
-     </ng-include>
-<ng-include
-       src="'/views/partials/load_more_button.html'">
-     </ng-include>
+<footer>
 <ng-include
        src="'/views/partials/footer.html'">
      </ng-include>
 
+</footer>

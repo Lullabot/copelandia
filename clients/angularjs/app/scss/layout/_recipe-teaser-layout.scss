@@ -2,10 +2,16 @@
 	@include respond-to($small, $medium) {
 		@include span-columns(6);
 		@include nth-omega(2n);
+		&:nth-child(2n+1) {
+			clear: both;
+		}
 	}
 	@include respond-to($medium) {
 		@include span-columns(4);
 		@include nth-omega(3n);
+		&:nth-child(3n+1) {
+			clear: both;
+		}
 	}
 	.rating{
 		float: right;
