@@ -1,7 +1,7 @@
 <ul class="recipe-teasers">
   <li class="recipe-teaser" data-ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe">
     <div>
-      <img data-ns-show="recipe.field_recipe_photos.length !== 0" data-ng-src="{{getImage(recipe)}}">
+      <img data-ng-show="recipe.field_recipe_photos.length !== 0" data-ng-src="{{getImage(recipe)}}">
       <h2>{{recipe.title}}</h2>
       <aside class="comments">
         <span class="comment-count">5</span>
