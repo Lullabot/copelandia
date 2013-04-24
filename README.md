@@ -9,7 +9,7 @@ oriented Drupal site, to decouple the Drupal Backend from the Frontend.
 1. Clone this repository's project.
 1. Set up a local virtualhost, such as copelandia.local pointing to root-of-this-project/docroot.
  * Also add the entry at your hosts file.
-1. Install the site by going to http://msnbc.local/install.php
+1. Install the site by going to http://copelandia.local/install.php
  * You can also install Drupal via Drush.
 1. Sync your local database and files with the development environment with the following
    commands:
