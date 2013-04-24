@@ -1,12 +1,4 @@
 <ul class="recipe-teasers">
-  <div class="panel row radius">
-    <div class="small-2 columns">
-      <label>Filtering On: </label>
-    </div>
-    <div class="small-10 columns">
-      <span class="alert-box secondary">{{recipe.title}}</span>
-    </div>
-  </div>
   <li class="recipe-teaser" ng-repeat="recipe in recipes.list | orderBy:'title' | filter:recipe" ng-init="getImages(recipes)">
     <div>
       <img src="{{recipe.image.url}}">
