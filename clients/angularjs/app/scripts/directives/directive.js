@@ -3,12 +3,13 @@
 /* Directives */
 
 angular.module('directive.protobot', []).
-  directive('repeatNtimes', function() {
+  directive('protoRepeat', function() {
     return {
-    restrict: "E",
+    restrict: "A",
     compile: function(tElement, attrs) {
+      console.log(arguments);
       var content = tElement.children();
-      for (var i=1; i<attrs.repeat; i++) {
+      for (var i=1; i<attrs.protoRepeat; i++) {
         tElement.append(content.clone());
       }
     }
