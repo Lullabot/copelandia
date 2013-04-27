@@ -13,3 +13,15 @@ $medium: 800px;
     @media screen and (min-width: $primary) and (max-width: $secondary - 1) { @content; }
   }
 }
+
+  @mixin clearfix {
+  &:before,
+  &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  &:after {
+      clear: both;
+  }
+}

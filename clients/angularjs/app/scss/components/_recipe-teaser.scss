@@ -1,8 +1,7 @@
 .recipe-teasers {
-	li {
-		list-style: none;
-	}
+	@include clearfix;
 	.recipe-teaser{
+		list-style: none;
 		margin-bottom:1em;
 		background: #e7e7e7;
 		position: relative;
