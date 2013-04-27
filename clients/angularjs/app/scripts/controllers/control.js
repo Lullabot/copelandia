@@ -3,7 +3,6 @@
 function recipeController($scope, Node, File) {
   // Init local cache.
   $scope.cache = {};
-
   var recipes = $scope.recipes = Node.GetNodes();
   console.log(recipes);
   $scope.getImage = function(recipe) {
@@ -25,7 +24,6 @@ function recipeController($scope, Node, File) {
 
 function PagesController($scope, $http, $route, $routeParams, $compile) {
   $route.current.templateUrl = 'views/' + $routeParams.name + ".html";
-
   $http.get($route.current.templateUrl).then(function (msg) {
     $('.container').html($compile(msg.data)($scope));
   });
