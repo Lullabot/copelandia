@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for copelandia module.
+ */
+
+/**
+ * Implements hook_update_N()
+ *
+ * Disables toolbar module since admin_menu_toolbar will be used instead.
+ */
+function copelandia_update_7000(&$sandbox) {
+  $modules = array('toolbar');
+  module_disable($modules);
+  drupal_uninstall_modules($modules);
+}
