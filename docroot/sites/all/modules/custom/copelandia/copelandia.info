@@ -1,0 +1,9 @@
+name = Copelandia
+description = Main settings for Copelandia site
+core = 7.x
+package = Copelandia
+version = 7.x-1.0
+project = copelandia
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+features[features_api][] = api:1
