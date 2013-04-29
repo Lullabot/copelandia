@@ -1,0 +1,13 @@
+<header id="header">
+  <img src="http://placehold.it/1600x450&text=Red Robot Kitchen">
+</header>
+<div id="main" class="recipe-detail" data-ng-controller="RecipeView">
+    <h1>{{ recipe.title }}</h1>
+    <img class="photo" data-ng-show="recipe.field_recipe_photos.length !== 0" data-ng-src="{{getImage(recipe)}}">
+    <p class="instructions">{{ recipe.field_recipe_instructions }}</p>
+
+</div>
+
+<footer>
+    <data-ng-include src="'/views/partials/footer.html'"></data-ng-include>
+</footer>
