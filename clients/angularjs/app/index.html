@@ -23,10 +23,16 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <header id="header">
+      <img src="http://placehold.it/1600x450&text=Red Robot Kitchen">
+    </header>
 
-    <!-- Here we tell it what partial to use in app.js .config
-         so that we can dynamically switch this out. -->
     <div class="container" data-ng-view></div>
+
+    <footer>
+      <data-ng-include src="'/views/partials/footer.html'"></data-ng-include>
+    </footer>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
