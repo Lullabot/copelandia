@@ -1,7 +1,3 @@
-$small: 500px;
-$medium: 800px;
-
-
 @mixin respond-to($primary, $secondary:min-width) {
   @if $secondary == max-width {
     @media screen and (max-width: $primary - 1) { @content; }
@@ -11,17 +7,5 @@ $medium: 800px;
   }
   @else {
     @media screen and (min-width: $primary) and (max-width: $secondary - 1) { @content; }
-  }
-}
-
-  @mixin clearfix {
-  &:before,
-  &:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-  }
-
-  &:after {
-      clear: both;
   }
 }

@@ -1,32 +1,11 @@
-$column-count: 12;
-$column-width: 5em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
-
-#page {
-  //@include container;
-}
-
 #header {
-  //@include container;
+  //full width
 }
 
 #main {
   @include container;
 }
 
-#content {
-
-}
-
-#sidebar-first {
-
-}
-
-#sidebar-second {
-
-}
-
 #footer {
-  
+  @include container;
 }

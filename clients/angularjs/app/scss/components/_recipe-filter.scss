@@ -1,13 +1,33 @@
 .recipe-filter {
+  height: 5em;
+  margin-bottom: 1em;
+  background: #e7e7e7;
   text-align: center;
-  .search input {
-    width: 100%;
-    margin: 1em 0;
+  position: relative;
+  .search {
+    line-height: 2;
+     input {
+      width: 100%;
+    }
   }
   .filter {
     line-height: 2;
-    ul {
+    li {
+      &:hover {
+        & .secondary {
+          display: block;
+        }
+      }
+    }
+    .secondary {
       display: none;
+      position: absolute;
+      left: 0;
+      bottom: 1em;
+      li {
+        display: inline-block;
+        margin: 0 2em;
+      }
     }
   }
 }
