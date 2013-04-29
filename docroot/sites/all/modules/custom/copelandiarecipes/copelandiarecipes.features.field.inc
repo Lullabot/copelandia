@@ -385,7 +385,7 @@ function copelandiarecipes_field_default_fields() {
       'label' => 'Instructions',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -673,6 +673,74 @@ function copelandiarecipes_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-recipe-field_submitted_by'.
+  $fields['node-recipe-field_submitted_by'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_submitted_by',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'recipe',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 8,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_submitted_by',
+      'label' => 'Submitted By',
+      'required' => FALSE,
+      'settings' => array(
+        'text_processing' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'text',
+        'settings' => array(
+          'size' => 60,
+        ),
+        'type' => 'text_textfield',
+        'weight' => '9',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Amount');
@@ -687,6 +755,7 @@ function copelandiarecipes_field_default_fields() {
   t('Prep time');
   t('Source of Recipe');
   t('Step by step instructions to prepare this awesome recipe. Please keep instructions in the order that they should be performed.');
+  t('Submitted By');
   t('We\'re still figuring out the process for photos so we will likely ask your for more once we\'ve got a plan in place. But if you\'ve got some you would like to share now feel free!');
 
   return $fields;

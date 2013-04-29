@@ -23,6 +23,7 @@ features[field][] = node-recipe-field_recipe_photos
 features[field][] = node-recipe-field_recipe_prep_time
 features[field][] = node-recipe-field_recipe_servings
 features[field][] = node-recipe-field_recipe_source
+features[field][] = node-recipe-field_submitted_by
 features[node][] = recipe
 features[variable][] = comment_anonymous_recipe
 features[variable][] = comment_default_mode_recipe
