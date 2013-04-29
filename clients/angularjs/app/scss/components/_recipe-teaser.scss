@@ -5,9 +5,11 @@
 		margin-bottom:1em;
 		background: #e7e7e7;
 		position: relative;
-		img{
-			width: 100%;
-			height: auto;
+		.photo {
+			display: block;
+			padding-bottom: 75%;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 		h2{
 			font-size: 1.375em;
