@@ -14,6 +14,10 @@ var app = angular.module('app', ['resource.node', 'resource.file', 'directive.pr
         templateUrl: 'views/partials/recipe_view.html',
         controller: 'RecipeView'
       }).
+      when('/:name', {
+        templateUrl: 'views/partials/blank.html',
+        controller: PagesController
+      }).
       otherwise({
         redirectTo: '/'
       });
