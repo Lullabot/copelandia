@@ -11,7 +11,7 @@ var app = angular.module('app', ['resource.node', 'resource.file', 'directive.pr
         templateUrl: 'views/recipes.html'
       }).
       when('/recipe/:id', {
-        templateUrl: 'views/partials/recipe_view.html',
+        templateUrl: 'views/recipe_detail.html',
         controller: 'RecipeView'
       }).
       when('/:name', {
