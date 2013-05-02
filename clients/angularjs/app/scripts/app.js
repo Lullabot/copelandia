@@ -16,7 +16,7 @@ var app = angular.module('app', ['resource.node', 'resource.file', 'directive.pr
       }).
       when('/:name', {
         templateUrl: 'views/partials/blank.html',
-        controller: PagesController
+        controller: 'PagesController'
       }).
       otherwise({
         redirectTo: '/'
