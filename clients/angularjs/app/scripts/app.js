@@ -15,7 +15,7 @@ var app = angular.module('app', ['resource.node', 'resource.file', 'directive.pr
         controller: 'RecipeView'
       }).
       when('/:name', {
-        templateUrl: 'views/partials/blank.html',
+        templateUrl: 'views/main.html',
         controller: 'PagesController'
       }).
       otherwise({
