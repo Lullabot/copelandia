@@ -15,3 +15,12 @@ function copelandia_update_7000(&$sandbox) {
   module_disable($modules);
   drupal_uninstall_modules($modules);
 }
+
+/**
+ * Implements hook_update_N()
+ *
+ * Installs module copelandia_user.
+ */
+function copelandia_update_7001(&$sandbox) {
+  module_enable(array('copelandia_user'));
+}
