@@ -20,7 +20,7 @@ function copelandia_rest_default_services_endpoint() {
     'services_oauth' => array(
       'oauth_context' => 'copelandia',
       'authorization' => 'basic',
-      'credentials' => 'token',
+      'credentials' => 'consumer',
     ),
   );
   $endpoint->server_settings = array();
