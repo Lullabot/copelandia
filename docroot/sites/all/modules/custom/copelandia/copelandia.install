@@ -24,3 +24,12 @@ function copelandia_update_7000(&$sandbox) {
 function copelandia_update_7001(&$sandbox) {
   module_enable(array('copelandia_user'));
 }
+
+/**
+ * Implements hook_update_N()
+ *
+ * Installs module copelandia_rest.
+ */
+function copelandia_update_7002(&$sandbox) {
+  module_enable(array('copelandia_rest'));
+}
