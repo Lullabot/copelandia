@@ -1,7 +1,7 @@
 name = Copelandia REST
 description = REST server for client applications
 core = 7.x
-package = Features
+package = Copelandia
 version = 7.x-1.0
 project = copelandia_rest
 dependencies[] = ctools
