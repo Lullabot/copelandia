@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "COPRecipeListViewController.h"
 
 @interface COPAppDelegate : UIResponder <UIApplicationDelegate>
 

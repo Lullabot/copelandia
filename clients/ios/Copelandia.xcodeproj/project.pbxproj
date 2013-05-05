@@ -18,6 +18,9 @@
 		4636C8061736FF2B0065B0ED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8051736FF2B0065B0ED /* Default@2x.png */; };
 		4636C8081736FF2B0065B0ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8071736FF2B0065B0ED /* Default-568h@2x.png */; };
 		4636C80B1736FF2B0065B0ED /* Copelandia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4636C8091736FF2B0065B0ED /* Copelandia.xcdatamodeld */; };
+		463BE3D017370068009E3054 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3CF17370068009E3054 /* Recipe.m */; };
+		463BE3D21737007D009E3054 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463BE3D11737007D009E3054 /* MainStoryboard.storyboard */; };
+		463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,11 @@
 		4636C8051736FF2B0065B0ED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4636C8071736FF2B0065B0ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4636C80A1736FF2B0065B0ED /* Copelandia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Copelandia.xcdatamodel; sourceTree = "<group>"; };
+		463BE3CE17370068009E3054 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		463BE3CF17370068009E3054 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		463BE3D11737007D009E3054 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
+		463BE3D3173700A4009E3054 /* COPRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPRecipeListViewController.h; sourceTree = "<group>"; };
+		463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPRecipeListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,11 @@
 				4636C8001736FF2B0065B0ED /* COPAppDelegate.h */,
 				4636C8011736FF2B0065B0ED /* COPAppDelegate.m */,
 				4636C8091736FF2B0065B0ED /* Copelandia.xcdatamodeld */,
+				463BE3CE17370068009E3054 /* Recipe.h */,
+				463BE3CF17370068009E3054 /* Recipe.m */,
+				463BE3D11737007D009E3054 /* MainStoryboard.storyboard */,
+				463BE3D3173700A4009E3054 /* COPRecipeListViewController.h */,
+				463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */,
 				4636C7F81736FF2B0065B0ED /* Supporting Files */,
 			);
 			path = Copelandia;
@@ -162,6 +175,7 @@
 				4636C8041736FF2B0065B0ED /* Default.png in Resources */,
 				4636C8061736FF2B0065B0ED /* Default@2x.png in Resources */,
 				4636C8081736FF2B0065B0ED /* Default-568h@2x.png in Resources */,
+				463BE3D21737007D009E3054 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +189,8 @@
 				4636C7FE1736FF2B0065B0ED /* main.m in Sources */,
 				4636C8021736FF2B0065B0ED /* COPAppDelegate.m in Sources */,
 				4636C80B1736FF2B0065B0ED /* Copelandia.xcdatamodeld in Sources */,
+				463BE3D017370068009E3054 /* Recipe.m in Sources */,
+				463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +305,7 @@
 				4636C8101736FF2C0065B0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
