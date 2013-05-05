@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Copelandia REST feature.
+ */
+
+include_once 'copelandia_rest.features.inc';
