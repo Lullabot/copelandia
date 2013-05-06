@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "COPAddRecipeViewController.h"
 
-@interface COPRecipeListViewController : UITableViewController <COPAddRecipeViewControllerDelegate>
+@interface COPRecipeListViewController : UITableViewController <COPAddRecipeViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

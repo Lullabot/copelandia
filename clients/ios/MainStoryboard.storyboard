@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Recipe List View Controller-->
+        <!--Recipe List View Controller - Recipes-->
         <scene sceneID="HRg-o2-EZH">
             <objects>
                 <tableViewController id="VIf-Z4-NwA" customClass="COPRecipeListViewController" sceneMemberID="viewController">
@@ -13,14 +13,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ZS5-bx-i0e">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ZS5-bx-i0e">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="kvH-Q4-Q9k" kind="push" identifier="ViewRecipe" id="XHu-xY-esx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,7 +31,7 @@
                             <outlet property="delegate" destination="VIf-Z4-NwA" id="rJH-JO-CzZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4dC-ez-hbk">
+                    <navigationItem key="navigationItem" title="Recipes" id="4dC-ez-hbk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOc-Sa-xg0">
                             <connections>
                                 <segue destination="4Pd-ce-2Ph" kind="modal" identifier="AddRecipe" id="8b6-dI-4aS"/>
@@ -124,7 +127,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6V-JJ-aIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-226"/>
+            <point key="canvasLocation" x="1382" y="-408"/>
+        </scene>
+        <!--Recipe Display Edit View Controller-->
+        <scene sceneID="sJC-wF-CRE">
+            <objects>
+                <viewController id="kvH-Q4-Q9k" customClass="COPRecipeDisplayEditViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1YA-Xf-bTg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxT-vh-Uzi">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XIB-CF-jE6">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-mc-qaQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-ro-oUb">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="starteEditing:" destination="kvH-Q4-Q9k" eventType="touchUpInside" id="drU-Hx-Bep"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mab-Cg-mn6">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneEditing:" destination="kvH-Q4-Q9k" eventType="touchUpInside" id="hqv-T9-dnG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wzC-ro-oUb" firstAttribute="top" secondItem="eDt-mc-qaQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6tN-Oo-aDg"/>
+                            <constraint firstAttribute="trailing" secondItem="XIB-CF-jE6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DjH-ei-wRL"/>
+                            <constraint firstAttribute="trailing" secondItem="eDt-mc-qaQ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Hha-Oa-FyP"/>
+                            <constraint firstItem="XIB-CF-jE6" firstAttribute="top" secondItem="RxT-vh-Uzi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OFv-sB-PMe"/>
+                            <constraint firstAttribute="trailing" secondItem="RxT-vh-Uzi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Vdi-qc-36d"/>
+                            <constraint firstItem="wzC-ro-oUb" firstAttribute="leading" secondItem="1YA-Xf-bTg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zq1-q0-09D"/>
+                            <constraint firstItem="eDt-mc-qaQ" firstAttribute="leading" secondItem="1YA-Xf-bTg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ext-Dc-pY3"/>
+                            <constraint firstItem="XIB-CF-jE6" firstAttribute="leading" secondItem="1YA-Xf-bTg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fGl-KD-Q40"/>
+                            <constraint firstItem="RxT-vh-Uzi" firstAttribute="leading" secondItem="1YA-Xf-bTg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hqP-bA-tfX"/>
+                            <constraint firstAttribute="trailing" secondItem="Mab-Cg-mn6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rVC-kq-ZXm"/>
+                            <constraint firstItem="RxT-vh-Uzi" firstAttribute="top" secondItem="1YA-Xf-bTg" secondAttribute="top" constant="20" symbolic="YES" type="default" id="sJo-GK-40Y"/>
+                            <constraint firstItem="eDt-mc-qaQ" firstAttribute="top" secondItem="XIB-CF-jE6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xtL-XT-LK0"/>
+                            <constraint firstItem="Mab-Cg-mn6" firstAttribute="baseline" secondItem="wzC-ro-oUb" secondAttribute="baseline" type="default" id="zt1-Ev-Zko"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jmA-Km-jVk"/>
+                    <connections>
+                        <outlet property="bodyField" destination="eDt-mc-qaQ" id="q9o-wl-TI7"/>
+                        <outlet property="doneButton" destination="Mab-Cg-mn6" id="fmo-3w-3F9"/>
+                        <outlet property="editButton" destination="wzC-ro-oUb" id="A4t-Vd-tj1"/>
+                        <outlet property="submittedByField" destination="XIB-CF-jE6" id="n9S-D3-wbx"/>
+                        <outlet property="titleField" destination="RxT-vh-Uzi" id="f73-oO-IXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOL-cF-vtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="290"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dHX-gl-NdU">
