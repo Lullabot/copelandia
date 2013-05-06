@@ -18,6 +18,6 @@
 @dynamic servings;
 @dynamic instructions;
 @dynamic source;
-@dynamic submiteedBy;
+@dynamic submittedBy;
 
 @end

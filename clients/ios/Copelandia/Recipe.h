@@ -19,6 +19,6 @@
 @property (nonatomic, retain) NSNumber * servings;
 @property (nonatomic, retain) NSString * instructions;
 @property (nonatomic, retain) NSString * source;
-@property (nonatomic, retain) NSString * submiteedBy;
+@property (nonatomic, retain) NSString * submittedBy;
 
 @end
