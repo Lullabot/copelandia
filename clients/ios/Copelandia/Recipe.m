@@ -20,4 +20,10 @@
 @dynamic source;
 @dynamic submittedBy;
 
+-(void)awakeFromInsert {
+    [super awakeFromInsert];
+
+    // custom initialization of object
+}
+
 @end
