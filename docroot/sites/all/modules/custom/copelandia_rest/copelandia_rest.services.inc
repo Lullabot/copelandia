@@ -23,37 +23,94 @@ function copelandia_rest_default_services_endpoint() {
       'credentials' => 'consumer',
     ),
   );
-  $endpoint->server_settings = array();
+  $endpoint->server_settings = array(
+    'formatters' => array(
+      'bencode' => TRUE,
+      'json' => TRUE,
+      'php' => TRUE,
+      'rss' => TRUE,
+      'xml' => TRUE,
+      'jsonp' => FALSE,
+    ),
+    'parsers' => array(
+      'application/json' => TRUE,
+      'application/vnd.php.serialized' => TRUE,
+      'application/x-www-form-urlencoded' => TRUE,
+      'application/xml' => TRUE,
+      'multipart/form-data' => TRUE,
+      'text/xml' => TRUE,
+    ),
+  );
   $endpoint->resources = array(
     'user' => array(
       'operations' => array(
         'retrieve' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
         'create' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
         'update' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
         'delete' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
       ),
       'actions' => array(
         'login' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
         'logout' => array(
           'enabled' => '1',
           'settings' => array(
             'services' => array(
-              'resource_api_version' => '1.1',
+              'resource_api_version' => '1.0',
+            ),
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
             ),
           ),
         ),
         'register' => array(
           'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
         ),
       ),
     ),
