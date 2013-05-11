@@ -33,3 +33,14 @@ function copelandia_update_7001(&$sandbox) {
 function copelandia_update_7002(&$sandbox) {
   module_enable(array('copelandia_rest'));
 }
+
+/**
+ * Implements hook_update_N()
+ *
+ * Disables copelandia_user since now we are using Services + OAuth.
+ */
+function copelandia_update_7003(&$sandbox) {
+  $modules = array('copelandia_user');
+  module_disable($modules);
+  drupal_uninstall_modules($modules);
+}
