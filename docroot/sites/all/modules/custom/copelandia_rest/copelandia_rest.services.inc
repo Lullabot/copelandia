@@ -42,6 +42,86 @@ function copelandia_rest_default_services_endpoint() {
     ),
   );
   $endpoint->resources = array(
+    'node' => array(
+      'operations' => array(
+        'retrieve' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+        'create' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+        'update' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+        'delete' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+        'index' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+      ),
+      'relationships' => array(
+        'files' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+        'comments' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+      ),
+      'targeted_actions' => array(
+        'attach_file' => array(
+          'enabled' => '1',
+          'settings' => array(
+            'services_oauth' => array(
+              'credentials' => 'consumer',
+              'authorization' => 'basic',
+            ),
+          ),
+        ),
+      ),
+    ),
     'user' => array(
       'operations' => array(
         'retrieve' => array(
