@@ -11,16 +11,10 @@ oriented Drupal site, to decouple the Drupal Backend from the Frontend.
  * Also add the entry at your hosts file.
 1. Install the site by going to http://copelandia.local/install.php
  * You can also install Drupal via Drush.
-1. Sync your local database and files with the development environment with the following
-   commands:
- * Note: you may need to review permissions at the files directory.
-
-``` bash
-drush syncdb
-drush syncfiles
-```
+1. Enable the following modules: copelandia, copelandiarecipes, copelandia_rest.
 1. Open http://copelandia.local in your browser. You should get the same output as the one at
 http://copelandia.lulladev.com.
+1. Create some recipes.
 
 ## OAuth authentication
 Some of the client requests need OAuth authentication. For example, registering a user or
