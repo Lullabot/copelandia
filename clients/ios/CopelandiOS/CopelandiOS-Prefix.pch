@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Copelandia' target in the 'Copelandia' project
+// Prefix header for all source files of the 'CopelandiOS' target in the 'CopelandiOS' project
 //
 
 #import <Availability.h>

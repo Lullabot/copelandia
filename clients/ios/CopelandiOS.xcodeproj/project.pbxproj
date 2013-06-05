@@ -17,7 +17,7 @@
 		4636C8041736FF2B0065B0ED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8031736FF2B0065B0ED /* Default.png */; };
 		4636C8061736FF2B0065B0ED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8051736FF2B0065B0ED /* Default@2x.png */; };
 		4636C8081736FF2B0065B0ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8071736FF2B0065B0ED /* Default-568h@2x.png */; };
-		4636C80B1736FF2B0065B0ED /* Copelandia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4636C8091736FF2B0065B0ED /* Copelandia.xcdatamodeld */; };
+		4636C80B1736FF2B0065B0ED /* CopelandiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4636C8091736FF2B0065B0ED /* CopelandiOS.xcdatamodeld */; };
 		463BE3D017370068009E3054 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3CF17370068009E3054 /* Recipe.m */; };
 		463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */; };
 		463BE3D8173731D1009E3054 /* COPAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3D7173731D1009E3054 /* COPAddRecipeViewController.m */; };
@@ -26,21 +26,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4636C7EC1736FF2B0065B0ED /* Copelandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copelandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4636C7EC1736FF2B0065B0ED /* CopelandiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopelandiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4636C7EF1736FF2B0065B0ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4636C7F11736FF2B0065B0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4636C7F31736FF2B0065B0ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4636C7F51736FF2B0065B0ED /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4636C7F91736FF2B0065B0ED /* Copelandia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Copelandia-Info.plist"; sourceTree = "<group>"; };
+		4636C7F91736FF2B0065B0ED /* CopelandiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CopelandiOS-Info.plist"; sourceTree = "<group>"; };
 		4636C7FB1736FF2B0065B0ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4636C7FD1736FF2B0065B0ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4636C7FF1736FF2B0065B0ED /* Copelandia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Copelandia-Prefix.pch"; sourceTree = "<group>"; };
+		4636C7FF1736FF2B0065B0ED /* CopelandiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CopelandiOS-Prefix.pch"; sourceTree = "<group>"; };
 		4636C8001736FF2B0065B0ED /* COPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COPAppDelegate.h; sourceTree = "<group>"; };
 		4636C8011736FF2B0065B0ED /* COPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COPAppDelegate.m; sourceTree = "<group>"; };
 		4636C8031736FF2B0065B0ED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4636C8051736FF2B0065B0ED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4636C8071736FF2B0065B0ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4636C80A1736FF2B0065B0ED /* Copelandia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Copelandia.xcdatamodel; sourceTree = "<group>"; };
+		4636C80A1736FF2B0065B0ED /* CopelandiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopelandiOS.xcdatamodel; sourceTree = "<group>"; };
 		463BE3CE17370068009E3054 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		463BE3CF17370068009E3054 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		463BE3D3173700A4009E3054 /* COPRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPRecipeListViewController.h; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		4636C7E31736FF2B0065B0ED = {
 			isa = PBXGroup;
 			children = (
-				4636C7F71736FF2B0065B0ED /* Copelandia */,
+				4636C7F71736FF2B0065B0ED /* CopelandiOS */,
 				4636C7EE1736FF2B0065B0ED /* Frameworks */,
 				4636C7ED1736FF2B0065B0ED /* Products */,
 			);
@@ -79,7 +79,7 @@
 		4636C7ED1736FF2B0065B0ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4636C7EC1736FF2B0065B0ED /* Copelandia.app */,
+				4636C7EC1736FF2B0065B0ED /* CopelandiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,13 +95,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4636C7F71736FF2B0065B0ED /* Copelandia */ = {
+		4636C7F71736FF2B0065B0ED /* CopelandiOS */ = {
 			isa = PBXGroup;
 			children = (
 				464CF8A817403711001D0B0C /* MainStoryboard.storyboard */,
 				4636C8001736FF2B0065B0ED /* COPAppDelegate.h */,
 				4636C8011736FF2B0065B0ED /* COPAppDelegate.m */,
-				4636C8091736FF2B0065B0ED /* Copelandia.xcdatamodeld */,
+				4636C8091736FF2B0065B0ED /* CopelandiOS.xcdatamodeld */,
 				463BE3CE17370068009E3054 /* Recipe.h */,
 				463BE3CF17370068009E3054 /* Recipe.m */,
 				463BE3D6173731D1009E3054 /* COPAddRecipeViewController.h */,
@@ -112,16 +112,17 @@
 				463BE3DA17373D5E009E3054 /* COPRecipeDisplayEditViewController.m */,
 				4636C7F81736FF2B0065B0ED /* Supporting Files */,
 			);
-			path = Copelandia;
+			name = CopelandiOS;
+			path = CopelandiOS;
 			sourceTree = "<group>";
 		};
 		4636C7F81736FF2B0065B0ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4636C7F91736FF2B0065B0ED /* Copelandia-Info.plist */,
+				4636C7F91736FF2B0065B0ED /* CopelandiOS-Info.plist */,
 				4636C7FA1736FF2B0065B0ED /* InfoPlist.strings */,
 				4636C7FD1736FF2B0065B0ED /* main.m */,
-				4636C7FF1736FF2B0065B0ED /* Copelandia-Prefix.pch */,
+				4636C7FF1736FF2B0065B0ED /* CopelandiOS-Prefix.pch */,
 				4636C8031736FF2B0065B0ED /* Default.png */,
 				4636C8051736FF2B0065B0ED /* Default@2x.png */,
 				4636C8071736FF2B0065B0ED /* Default-568h@2x.png */,
@@ -132,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4636C7EB1736FF2B0065B0ED /* Copelandia */ = {
+		4636C7EB1736FF2B0065B0ED /* CopelandiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4636C80E1736FF2C0065B0ED /* Build configuration list for PBXNativeTarget "Copelandia" */;
+			buildConfigurationList = 4636C80E1736FF2C0065B0ED /* Build configuration list for PBXNativeTarget "CopelandiOS" */;
 			buildPhases = (
 				4636C7E81736FF2B0065B0ED /* Sources */,
 				4636C7E91736FF2B0065B0ED /* Frameworks */,
@@ -144,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = Copelandia;
-			productName = Copelandia;
-			productReference = 4636C7EC1736FF2B0065B0ED /* Copelandia.app */;
+			name = CopelandiOS;
+			productName = CopelandiOS;
+			productReference = 4636C7EC1736FF2B0065B0ED /* CopelandiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +160,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Lullabot;
 			};
-			buildConfigurationList = 4636C7E71736FF2B0065B0ED /* Build configuration list for PBXProject "Copelandia" */;
+			buildConfigurationList = 4636C7E71736FF2B0065B0ED /* Build configuration list for PBXProject "CopelandiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -171,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4636C7EB1736FF2B0065B0ED /* Copelandia */,
+				4636C7EB1736FF2B0065B0ED /* CopelandiOS */,
 			);
 		};
 /* End PBXProject section */
@@ -198,7 +199,7 @@
 			files = (
 				4636C7FE1736FF2B0065B0ED /* main.m in Sources */,
 				4636C8021736FF2B0065B0ED /* COPAppDelegate.m in Sources */,
-				4636C80B1736FF2B0065B0ED /* Copelandia.xcdatamodeld in Sources */,
+				4636C80B1736FF2B0065B0ED /* CopelandiOS.xcdatamodeld in Sources */,
 				463BE3D017370068009E3054 /* Recipe.m in Sources */,
 				463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */,
 				463BE3D8173731D1009E3054 /* COPAddRecipeViewController.m in Sources */,
@@ -280,9 +281,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Copelandia/Copelandia-Prefix.pch";
-				INFOPLIST_FILE = "Copelandia/Copelandia-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CopelandiOS/CopelandiOS-Prefix.pch";
+				INFOPLIST_FILE = "CopelandiOS/CopelandiOS-Info.plist";
+				PRODUCT_NAME = CopelandiOS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -291,9 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Copelandia/Copelandia-Prefix.pch";
-				INFOPLIST_FILE = "Copelandia/Copelandia-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CopelandiOS/CopelandiOS-Prefix.pch";
+				INFOPLIST_FILE = "CopelandiOS/CopelandiOS-Info.plist";
+				PRODUCT_NAME = CopelandiOS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -301,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4636C7E71736FF2B0065B0ED /* Build configuration list for PBXProject "Copelandia" */ = {
+		4636C7E71736FF2B0065B0ED /* Build configuration list for PBXProject "CopelandiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4636C80C1736FF2C0065B0ED /* Debug */,
@@ -310,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4636C80E1736FF2C0065B0ED /* Build configuration list for PBXNativeTarget "Copelandia" */ = {
+		4636C80E1736FF2C0065B0ED /* Build configuration list for PBXNativeTarget "CopelandiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4636C80F1736FF2C0065B0ED /* Debug */,
@@ -322,13 +323,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4636C8091736FF2B0065B0ED /* Copelandia.xcdatamodeld */ = {
+		4636C8091736FF2B0065B0ED /* CopelandiOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4636C80A1736FF2B0065B0ED /* Copelandia.xcdatamodel */,
+				4636C80A1736FF2B0065B0ED /* CopelandiOS.xcdatamodel */,
 			);
-			currentVersion = 4636C80A1736FF2B0065B0ED /* Copelandia.xcdatamodel */;
-			path = Copelandia.xcdatamodeld;
+			currentVersion = 4636C80A1736FF2B0065B0ED /* CopelandiOS.xcdatamodel */;
+			path = CopelandiOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
