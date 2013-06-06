@@ -30,7 +30,7 @@
 	// Do any additional setup after loading the view.
     
     self.titleField.text = self.currentRecipe.title;
-    self.bodyField.text = self.currentRecipe.body;
+    [self.bodyWebView loadHTMLString:self.currentRecipe.body baseURL:nil];
     self.submittedByField.text = self.currentRecipe.submittedBy;
 }
 
@@ -45,11 +45,9 @@
     self.editButton.hidden = YES;
     
     self.titleField.enabled = YES;
-    self.bodyField.enabled = YES;
     self.submittedByField.enabled = YES;
 
     self.titleField.borderStyle = UITextBorderStyleRoundedRect;
-    self.bodyField.borderStyle = UITextBorderStyleRoundedRect;
     self.submittedByField.borderStyle = UITextBorderStyleRoundedRect;
 }
 
@@ -59,15 +57,12 @@
 
     self.currentRecipe.title = self.titleField.text;
     self.currentRecipe.submittedBy = self.submittedByField.text;
-    self.currentRecipe.body = self.bodyField.text;
     
     self.titleField.borderStyle = UITextBorderStyleNone;
-    self.bodyField.borderStyle = UITextBorderStyleNone;
     self.submittedByField.borderStyle = UITextBorderStyleNone;
 
     
     self.titleField.enabled = NO;
-    self.bodyField.enabled = NO;
     self.submittedByField.enabled = NO;
     
     COPAppDelegate *myApp = (COPAppDelegate *)[[UIApplication sharedApplication] delegate];

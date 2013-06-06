@@ -4,6 +4,7 @@
         <attribute name="body" optional="YES" attributeType="String" defaultValueString="BODY" syncable="YES"/>
         <attribute name="cookTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="instructions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prepTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="servings" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,6 +12,6 @@
         <attribute name="title" optional="YES" attributeType="String" defaultValueString="NEW RECIPE" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Recipe" positionX="160" positionY="192" width="128" height="180"/>
     </elements>
 </model>

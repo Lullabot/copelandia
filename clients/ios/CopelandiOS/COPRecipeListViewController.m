@@ -245,9 +245,38 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-
         for (id node in [JSON valueForKeyPath:@"list"]) {
-            Recipe *newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+            // Check to see if this is a new or locally-existing node
+            NSString *nid = [node valueForKey:@"nid"];
+
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:[self managedObjectContext]];
+            [fetchRequest setEntity:entity];
+
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"nid == %@", nid];
+            [fetchRequest setPredicate:predicate];
+
+            Recipe *newRecipe;
+
+            NSError *error = nil;
+            NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+            if (fetchedObjects != nil) {
+                // Nothing
+                if ([fetchedObjects count] == 0) {
+                    // Create a new recipe
+                    newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+                    newRecipe.nid = [node valueForKey:@"nid"];
+                }
+                else {
+                    newRecipe = [fetchedObjects objectAtIndex:0];
+                }
+            }
+            else {
+                // Create a new recipe
+                newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+                newRecipe.nid = [node valueForKey:@"nid"];
+            }
+
 
             if ([[node valueForKey:@"title"] isKindOfClass:[NSString class]]) {
                 newRecipe.title = [node valueForKey:@"title"];
@@ -265,13 +294,15 @@
                 newRecipe.source = [node valueForKey:@"field_recipe_source"];
             }
 
-            NSError *error = nil;
+            error = nil;
             if (![self.managedObjectContext save:&error]) {
                 NSLog(@"Error saving: %@", error);
             }
             [self dismissViewControllerAnimated:YES completion:nil];
         }
-    } failure:nil];
+    } failure:^( NSURLRequest *request , NSHTTPURLResponse *response , NSError *error , id JSON ) {
+        NSLog(@"Fail");
+    }];
 
     [operation start];
 }

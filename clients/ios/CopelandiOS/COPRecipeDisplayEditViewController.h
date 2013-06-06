@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 @property (strong, nonatomic) IBOutlet UITextField *submittedByField;
-@property (strong, nonatomic) IBOutlet UITextField *bodyField;
+@property (strong, nonatomic) IBOutlet UIWebView *bodyWebView;
 
 
 - (IBAction)starteEditing:(id)sender;

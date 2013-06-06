@@ -12,6 +12,7 @@
 
 @interface Recipe : NSManagedObject
 
+@property (nonatomic, retain) NSString * nid;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSNumber * prepTime;
