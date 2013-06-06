@@ -9,6 +9,7 @@
 #import "COPRecipeListViewController.h"
 #import "COPRecipeDisplayEditViewController.h"
 #import "Recipe.h"
+#import "AFJSONRequestOperation.h"
 
 @interface COPRecipeListViewController ()
 
@@ -235,6 +236,44 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         cont.currentRecipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
     }
+}
+
+
+// Refresh the list of recipes from Drupal
+- (IBAction)refreshList:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://copelandia.dev/node.json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+
+        for (id node in [JSON valueForKeyPath:@"list"]) {
+            Recipe *newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+
+            if ([[node valueForKey:@"title"] isKindOfClass:[NSString class]]) {
+                newRecipe.title = [node valueForKey:@"title"];
+            }
+
+            if ([[[node valueForKey:@"body"] valueForKey:@"value"] isKindOfClass:[NSString class]]) {
+                newRecipe.body = [[node valueForKey:@"body"] valueForKey:@"value"];
+            }
+
+            if ([[[node valueForKey:@"field_recipe_instructions"] valueForKey:@"value"] isKindOfClass:[NSString class]]) {
+                newRecipe.instructions = [[node valueForKey:@"field_recipe_instructions"] valueForKey:@"value"];
+            }
+
+            if ([[node valueForKey:@"field_recipe_source"] isKindOfClass:[NSString class]]) {
+                newRecipe.source = [node valueForKey:@"field_recipe_source"];
+            }
+
+            NSError *error = nil;
+            if (![self.managedObjectContext save:&error]) {
+                NSLog(@"Error saving: %@", error);
+            }
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    } failure:nil];
+
+    [operation start];
 }
 
 

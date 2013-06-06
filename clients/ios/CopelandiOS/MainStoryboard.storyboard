@@ -32,6 +32,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recipes" id="4dC-ez-hbk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="pYP-4y-fGb">
+                            <connections>
+                                <action selector="refreshList:" destination="VIf-Z4-NwA" id="Oe5-Si-ss3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOc-Sa-xg0">
                             <connections>
                                 <segue destination="4Pd-ce-2Ph" kind="modal" identifier="AddRecipe" id="8b6-dI-4aS"/>
@@ -225,6 +230,36 @@
             <point key="canvasLocation" x="324" y="-230"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="COPAddRecipeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPAddRecipeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="bodyField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="submittedByField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="COPRecipeDisplayEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPRecipeDisplayEditViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneEditing:"/>
+                <relationship kind="action" name="starteEditing:"/>
+                <relationship kind="outlet" name="bodyField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="submittedByField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="COPRecipeListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPRecipeListViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

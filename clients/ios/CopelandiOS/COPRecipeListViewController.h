@@ -15,4 +15,5 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
+- (IBAction)refreshList:(id)sender;
 @end
