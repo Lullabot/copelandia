@@ -2,7 +2,7 @@
 //  Recipe.m
 //  CopelandiOS
 //
-//  Created by Brock Boland on 5/5/13.
+//  Created by Brock Boland on 6/14/13.
 //  Copyright (c) 2013 Lullabot. All rights reserved.
 //
 
@@ -11,19 +11,15 @@
 
 @implementation Recipe
 
-@dynamic title;
 @dynamic body;
-@dynamic prepTime;
 @dynamic cookTime;
-@dynamic servings;
 @dynamic instructions;
+@dynamic nid;
+@dynamic prepTime;
+@dynamic servings;
 @dynamic source;
 @dynamic submittedBy;
-
--(void)awakeFromInsert {
-    [super awakeFromInsert];
-
-    // custom initialization of object
-}
+@dynamic title;
+@dynamic ingredients;
 
 @end

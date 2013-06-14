@@ -9,6 +9,7 @@
 #import "COPRecipeListViewController.h"
 #import "COPRecipeDisplayEditViewController.h"
 #import "Recipe.h"
+#import "Ingredient.h"
 #import "AFJSONRequestOperation.h"
 
 @interface COPRecipeListViewController ()
@@ -235,6 +236,7 @@
         COPRecipeDisplayEditViewController *cont = (COPRecipeDisplayEditViewController *)[segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         cont.currentRecipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        NSLog(@"Ingredients: %@", cont.currentRecipe.ingredients);
     }
 }
 
@@ -292,6 +294,30 @@
 
             if ([[node valueForKey:@"field_recipe_source"] isKindOfClass:[NSString class]]) {
                 newRecipe.source = [node valueForKey:@"field_recipe_source"];
+            }
+
+            // Ingredients
+            for (id ingredient in [node valueForKey:@"field_recipe_ingredients"]) {
+                NSString *ingredientUrlString = [[ingredient valueForKey:@"uri"] stringByAppendingPathExtension:@"json"];
+                NSURL *ingredientUrl = [NSURL URLWithString:ingredientUrlString];
+                NSData *responseData = [NSData dataWithContentsOfURL:ingredientUrl];
+                if (responseData) {
+                    NSError *ingredientError = nil;
+
+                    NSDictionary *ingredientJSON = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                                   options:kNilOptions
+                                                                                     error:&ingredientError];
+                    if (ingredientError) {
+                        NSLog(@"Error: %@", ingredientError);
+                    }
+                    else {
+                        // Create a new ingredient in the recipe
+                        Ingredient *ingredientMO = (Ingredient *)[NSEntityDescription insertNewObjectForEntityForName:@"Ingredient" inManagedObjectContext:self.managedObjectContext];
+                        ingredientMO.amount = [ingredientJSON objectForKey:@"field_ingredient_amount"];
+                        ingredientMO.ingredient = [ingredientJSON objectForKey:@"field_ingredient_ingredient"];
+                        ingredientMO.recipe = newRecipe;
+                    }
+                }
             }
 
             error = nil;

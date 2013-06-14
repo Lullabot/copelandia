@@ -40,32 +40,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)starteEditing:(id)sender {
-    self.doneButton.hidden = NO;
-    self.editButton.hidden = YES;
-    
-    self.titleField.enabled = YES;
-    self.submittedByField.enabled = YES;
 
-    self.titleField.borderStyle = UITextBorderStyleRoundedRect;
-    self.submittedByField.borderStyle = UITextBorderStyleRoundedRect;
-}
-
-- (IBAction)doneEditing:(id)sender {
-    self.doneButton.hidden = YES;
-    self.editButton.hidden = NO;
-
-    self.currentRecipe.title = self.titleField.text;
-    self.currentRecipe.submittedBy = self.submittedByField.text;
-    
-    self.titleField.borderStyle = UITextBorderStyleNone;
-    self.submittedByField.borderStyle = UITextBorderStyleNone;
-
-    
-    self.titleField.enabled = NO;
-    self.submittedByField.enabled = NO;
-    
-    COPAppDelegate *myApp = (COPAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [myApp saveContext];
-}
 @end

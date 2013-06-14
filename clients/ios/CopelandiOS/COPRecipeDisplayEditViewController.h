@@ -18,10 +18,4 @@
 @property (strong, nonatomic) IBOutlet UIWebView *bodyWebView;
 
 
-- (IBAction)starteEditing:(id)sender;
-- (IBAction)doneEditing:(id)sender;
-
-@property (strong, nonatomic) IBOutlet UIButton *editButton;
-@property (strong, nonatomic) IBOutlet UIButton *doneButton;
-
 @end
