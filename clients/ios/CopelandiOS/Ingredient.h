@@ -14,7 +14,8 @@
 @interface Ingredient : NSManagedObject
 
 @property (nonatomic, retain) NSString * amount;
-@property (nonatomic, retain) NSString * ingredient;
+@property (nonatomic, retain) NSString * ingredientName;
+@property (nonatomic, retain) NSString * itemID;
 @property (nonatomic, retain) Recipe *recipe;
 
 @end

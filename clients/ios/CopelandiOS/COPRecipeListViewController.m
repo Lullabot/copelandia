@@ -236,7 +236,7 @@
             NSError *error = nil;
             NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
             if (fetchedObjects != nil) {
-                // Nothing
+                // No items found
                 if ([fetchedObjects count] == 0) {
                     // Create a new recipe
                     newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
@@ -247,6 +247,7 @@
                 }
             }
             else {
+                // Fetch request failed or whatever
                 // Create a new recipe
                 newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
                 newRecipe.nid = [node valueForKey:@"nid"];
@@ -284,10 +285,34 @@
                         NSLog(@"Error: %@", ingredientError);
                     }
                     else {
-                        // Create a new ingredient in the recipe
-                        Ingredient *ingredientMO = (Ingredient *)[NSEntityDescription insertNewObjectForEntityForName:@"Ingredient" inManagedObjectContext:self.managedObjectContext];
+                        NSString *ingredientItemID = [ingredientJSON objectForKey:@"item_id"];
+
+                        // Create a fetch request to look for an existing ingredient
+                        NSFetchRequest *ingredientFetchRequest = [[NSFetchRequest alloc] init];
+                        NSEntityDescription *ingredientEntityDesc = [NSEntityDescription entityForName:@"Ingredient" inManagedObjectContext:[self managedObjectContext]];
+                        [ingredientFetchRequest setEntity:ingredientEntityDesc];
+
+                        NSPredicate *ingredientPredicate = [NSPredicate predicateWithFormat:@"itemID == %@", ingredientItemID];
+                        [ingredientFetchRequest setPredicate:ingredientPredicate];
+
+                        Ingredient *ingredientMO;
+
+                        NSError *ingredientFetchError = nil;
+                        NSArray *fetchedIngredients = [[self managedObjectContext] executeFetchRequest:ingredientFetchRequest error:&ingredientFetchError];
+                        if (fetchedIngredients != nil && [fetchedIngredients count] > 0) {
+                            ingredientMO = [fetchedIngredients objectAtIndex:0];
+                        }
+                        else {
+                            // Ingredient not found, create a new one
+                            ingredientMO = (Ingredient *)[NSEntityDescription insertNewObjectForEntityForName:@"Ingredient" inManagedObjectContext:self.managedObjectContext];
+                            ingredientMO.itemID = ingredientItemID;
+                        }
+
+                        // Set the amount and ingredient type on the Ingredient object
                         ingredientMO.amount = [ingredientJSON objectForKey:@"field_ingredient_amount"];
-                        ingredientMO.ingredient = [ingredientJSON objectForKey:@"field_ingredient_ingredient"];
+                        ingredientMO.ingredientName = [ingredientJSON objectForKey:@"field_ingredient_ingredient"];
+
+                        // Save this Ingredient to the Recipe
                         ingredientMO.recipe = newRecipe;
                     }
                 }

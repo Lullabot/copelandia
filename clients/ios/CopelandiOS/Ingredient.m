@@ -13,7 +13,8 @@
 @implementation Ingredient
 
 @dynamic amount;
-@dynamic ingredient;
+@dynamic ingredientName;
 @dynamic recipe;
+@dynamic itemID;
 
 @end
