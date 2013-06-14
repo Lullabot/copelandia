@@ -12,6 +12,8 @@
 #import "Ingredient.h"
 #import "AFJSONRequestOperation.h"
 
+#define kNodeListJson @"http://copelandia.lulladev.com/node.json"
+
 @interface COPRecipeListViewController ()
 
 @end
@@ -77,10 +79,6 @@
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
-}
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,7 +139,7 @@
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.managedObjectContext
-                                                                      sectionNameKeyPath:@"submittedBy"
+                                                                      sectionNameKeyPath:nil
                                                                                cacheName:nil];
     _fetchedResultsController.delegate = self;
     return _fetchedResultsController;
@@ -236,14 +234,13 @@
         COPRecipeDisplayEditViewController *cont = (COPRecipeDisplayEditViewController *)[segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         cont.currentRecipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        NSLog(@"Ingredients: %@", cont.currentRecipe.ingredients);
     }
 }
 
 
 // Refresh the list of recipes from Drupal
 - (IBAction)refreshList:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://copelandia.dev/node.json"];
+    NSURL *url = [NSURL URLWithString:kNodeListJson];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
@@ -327,7 +324,7 @@
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     } failure:^( NSURLRequest *request , NSHTTPURLResponse *response , NSError *error , id JSON ) {
-        NSLog(@"Fail");
+        NSLog(@"Failed to request node list.");
     }];
 
     [operation start];
