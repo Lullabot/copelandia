@@ -37,102 +37,12 @@
                                 <action selector="refreshList:" destination="VIf-Z4-NwA" id="m6a-eh-3nj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOc-Sa-xg0">
-                            <connections>
-                                <segue destination="4Pd-ce-2Ph" kind="modal" identifier="AddRecipe" id="8b6-dI-4aS"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOc-Sa-xg0"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiI-c4-Jhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="-230"/>
-        </scene>
-        <!--Add Recipe View Controller-->
-        <scene sceneID="dcP-Gj-oKQ">
-            <objects>
-                <viewController id="4Pd-ce-2Ph" customClass="COPAddRecipeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rdw-OG-XKI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-he-aRf">
-                                <items>
-                                    <navigationItem title="New Recipe" id="cel-99-6Oe">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ubu-Wq-zjC">
-                                            <connections>
-                                                <action selector="cancel:" destination="4Pd-ce-2Ph" id="B9R-C2-hQx"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="B1t-XQ-0jD">
-                                            <connections>
-                                                <action selector="save:" destination="4Pd-ce-2Ph" id="H5w-sw-NbO"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rak-fX-rqC">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJv-bd-ebX">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Body" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaM-EY-cDU">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPg-jP-z3y">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="49I-vl-T6F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWV-BQ-JNj">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-Io-sYa">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NaM-EY-cDU" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="212" id="7oc-id-FcQ"/>
-                            <constraint firstAttribute="trailing" secondItem="EWV-BQ-JNj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8cL-ls-KcA"/>
-                            <constraint firstItem="nPg-jP-z3y" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="99" id="B2g-p8-ScP"/>
-                            <constraint firstItem="NaM-EY-cDU" firstAttribute="leading" secondItem="nJv-bd-ebX" secondAttribute="leading" type="default" id="EcR-KW-k7r"/>
-                            <constraint firstItem="EWV-BQ-JNj" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="158" id="LqN-Xd-nK8"/>
-                            <constraint firstItem="nJv-bd-ebX" firstAttribute="leading" secondItem="rak-fX-rqC" secondAttribute="leading" type="default" id="Olq-wD-icJ"/>
-                            <constraint firstItem="x8J-he-aRf" firstAttribute="leading" secondItem="Rdw-OG-XKI" secondAttribute="leading" type="default" id="T8c-Ch-VfC"/>
-                            <constraint firstItem="IUF-Io-sYa" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="208" id="V9d-jy-H1k"/>
-                            <constraint firstItem="EWV-BQ-JNj" firstAttribute="leading" secondItem="nPg-jP-z3y" secondAttribute="leading" type="default" id="WdT-kQ-fcj"/>
-                            <constraint firstItem="x8J-he-aRf" firstAttribute="trailing" secondItem="Rdw-OG-XKI" secondAttribute="trailing" type="default" id="hlD-Xe-ZbZ"/>
-                            <constraint firstItem="rak-fX-rqC" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="103" id="j8w-vt-AKD"/>
-                            <constraint firstAttribute="trailing" secondItem="IUF-Io-sYa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lpU-JV-mZf"/>
-                            <constraint firstItem="rak-fX-rqC" firstAttribute="leading" secondItem="Rdw-OG-XKI" secondAttribute="leading" constant="42" id="meG-eZ-WcE"/>
-                            <constraint firstItem="nJv-bd-ebX" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" constant="162" id="qfK-ZA-6nf"/>
-                            <constraint firstItem="IUF-Io-sYa" firstAttribute="leading" secondItem="EWV-BQ-JNj" secondAttribute="leading" type="default" id="uMw-hb-IVE"/>
-                            <constraint firstItem="x8J-he-aRf" firstAttribute="top" secondItem="Rdw-OG-XKI" secondAttribute="top" type="default" id="uaj-GT-6jv"/>
-                            <constraint firstAttribute="trailing" secondItem="nPg-jP-z3y" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="y1Q-Ii-hyL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="bodyField" destination="IUF-Io-sYa" id="BI1-wW-P4C"/>
-                        <outlet property="submittedByField" destination="EWV-BQ-JNj" id="OAj-aw-OF1"/>
-                        <outlet property="titleField" destination="nPg-jP-z3y" id="6Cq-4K-Ees"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c6V-JJ-aIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1382" y="-408"/>
         </scene>
         <!--Recipe Display Edit View Controller-->
         <scene sceneID="sJC-wF-CRE">
@@ -177,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOL-cF-vtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382" y="290"/>
+            <point key="canvasLocation" x="1382" y="-230"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dHX-gl-NdU">
@@ -198,39 +108,6 @@
             <point key="canvasLocation" x="324" y="-230"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="COPAddRecipeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPAddRecipeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="bodyField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="submittedByField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="COPRecipeDisplayEditViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPRecipeDisplayEditViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneEditing:"/>
-                <relationship kind="action" name="starteEditing:"/>
-                <relationship kind="outlet" name="bodyWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="doneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="editButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="submittedByField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="COPRecipeListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/COPRecipeListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshList:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

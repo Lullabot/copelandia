@@ -204,32 +204,8 @@
 
 
 
-#pragma mark - COPAddRecipeViewControllerDelegate
-
--(void)addRecipeViewControllerDidCancel:(Recipe *)recipeToDelete {
-    [self.managedObjectContext deleteObject:recipeToDelete];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)addRecipeViewControllerDidSave {
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Error saving: %@", error);
-    }
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
 #pragma mark - Prep for segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"AddRecipe"]) {
-        COPAddRecipeViewController *cont = (COPAddRecipeViewController *)[segue destinationViewController];
-        cont.delegate = self;
-        
-        Recipe *newRecipe = (Recipe *)[NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
-        cont.currentRecipe = newRecipe;
-    }
-
     if ([[segue identifier] isEqualToString:@"ViewRecipe"]) {
         COPRecipeDisplayEditViewController *cont = (COPRecipeDisplayEditViewController *)[segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
