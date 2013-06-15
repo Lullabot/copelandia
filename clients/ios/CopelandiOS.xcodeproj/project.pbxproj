@@ -19,8 +19,9 @@
 		4636C8081736FF2B0065B0ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4636C8071736FF2B0065B0ED /* Default-568h@2x.png */; };
 		4636C80B1736FF2B0065B0ED /* CopelandiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4636C8091736FF2B0065B0ED /* CopelandiOS.xcdatamodeld */; };
 		463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */; };
-		463BE3DB17373D5E009E3054 /* COPRecipeDisplayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463BE3DA17373D5E009E3054 /* COPRecipeDisplayEditViewController.m */; };
 		464CF8A917403711001D0B0C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464CF8A817403711001D0B0C /* MainStoryboard.storyboard */; };
+		4656E7C6176BD7F900ECBF60 /* COPRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4656E7C5176BD7F900ECBF60 /* COPRecipeDetailViewController.m */; };
+		4656E7C9176BD89700ECBF60 /* COPIngredientListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4656E7C8176BD89700ECBF60 /* COPIngredientListViewController.m */; };
 		4695DF14176BBC080075B39C /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4695DF13176BBC080075B39C /* Recipe.m */; };
 		4695DF17176BBC090075B39C /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4695DF16176BBC090075B39C /* Ingredient.m */; };
 		469D32D1175FFE2F00746F22 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 469D32BF175FFE2F00746F22 /* AFHTTPClient.m */; };
@@ -52,9 +53,11 @@
 		4636C80A1736FF2B0065B0ED /* CopelandiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopelandiOS.xcdatamodel; sourceTree = "<group>"; };
 		463BE3D3173700A4009E3054 /* COPRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPRecipeListViewController.h; sourceTree = "<group>"; };
 		463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPRecipeListViewController.m; sourceTree = "<group>"; };
-		463BE3D917373D5E009E3054 /* COPRecipeDisplayEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPRecipeDisplayEditViewController.h; sourceTree = "<group>"; };
-		463BE3DA17373D5E009E3054 /* COPRecipeDisplayEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPRecipeDisplayEditViewController.m; sourceTree = "<group>"; };
 		464CF8A817403711001D0B0C /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4656E7C4176BD7F900ECBF60 /* COPRecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPRecipeDetailViewController.h; sourceTree = "<group>"; };
+		4656E7C5176BD7F900ECBF60 /* COPRecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPRecipeDetailViewController.m; sourceTree = "<group>"; };
+		4656E7C7176BD89700ECBF60 /* COPIngredientListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPIngredientListViewController.h; sourceTree = "<group>"; };
+		4656E7C8176BD89700ECBF60 /* COPIngredientListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPIngredientListViewController.m; sourceTree = "<group>"; };
 		4695DF12176BBC080075B39C /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		4695DF13176BBC080075B39C /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		4695DF15176BBC090075B39C /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
@@ -127,12 +130,14 @@
 			isa = PBXGroup;
 			children = (
 				464CF8A817403711001D0B0C /* MainStoryboard.storyboard */,
+				4656E7C7176BD89700ECBF60 /* COPIngredientListViewController.h */,
+				4656E7C8176BD89700ECBF60 /* COPIngredientListViewController.m */,
+				4656E7C4176BD7F900ECBF60 /* COPRecipeDetailViewController.h */,
+				4656E7C5176BD7F900ECBF60 /* COPRecipeDetailViewController.m */,
 				4636C8001736FF2B0065B0ED /* COPAppDelegate.h */,
 				4636C8011736FF2B0065B0ED /* COPAppDelegate.m */,
 				463BE3D3173700A4009E3054 /* COPRecipeListViewController.h */,
 				463BE3D4173700A4009E3054 /* COPRecipeListViewController.m */,
-				463BE3D917373D5E009E3054 /* COPRecipeDisplayEditViewController.h */,
-				463BE3DA17373D5E009E3054 /* COPRecipeDisplayEditViewController.m */,
 				4695DF18176BBC0F0075B39C /* Models */,
 				4695DF11176BBBF40075B39C /* Data Model */,
 				469D32BD175FFE2F00746F22 /* AFNetworking */,
@@ -271,7 +276,6 @@
 				4636C8021736FF2B0065B0ED /* COPAppDelegate.m in Sources */,
 				4636C80B1736FF2B0065B0ED /* CopelandiOS.xcdatamodeld in Sources */,
 				463BE3D5173700A4009E3054 /* COPRecipeListViewController.m in Sources */,
-				463BE3DB17373D5E009E3054 /* COPRecipeDisplayEditViewController.m in Sources */,
 				469D32D1175FFE2F00746F22 /* AFHTTPClient.m in Sources */,
 				469D32D2175FFE2F00746F22 /* AFHTTPRequestOperation.m in Sources */,
 				469D32D3175FFE2F00746F22 /* AFImageRequestOperation.m in Sources */,
@@ -283,6 +287,8 @@
 				469D32D9175FFE2F00746F22 /* UIImageView+AFNetworking.m in Sources */,
 				4695DF14176BBC080075B39C /* Recipe.m in Sources */,
 				4695DF17176BBC090075B39C /* Ingredient.m in Sources */,
+				4656E7C6176BD7F900ECBF60 /* COPRecipeDetailViewController.m in Sources */,
+				4656E7C9176BD89700ECBF60 /* COPIngredientListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

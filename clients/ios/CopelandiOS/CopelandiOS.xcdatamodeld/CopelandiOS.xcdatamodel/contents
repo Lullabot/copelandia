@@ -8,11 +8,11 @@
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cookTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cookTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="instructions" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="prepTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="servings" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="servings" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="submittedBy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,6 +20,6 @@
     </entity>
     <elements>
         <element name="Ingredient" positionX="459" positionY="297" width="128" height="105"/>
-        <element name="Recipe" positionX="160" positionY="192" width="128" height="193"/>
+        <element name="Recipe" positionX="160" positionY="192" width="128" height="195"/>
     </elements>
 </model>
