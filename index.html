@@ -84,16 +84,27 @@
         </ul>
       </section>
       <section>
-        <h2>The CMS</h2>
-        <h3>Drupal 7 + Services* + OAuth</h3>
-        <ul>
-          <li>https://github.com/Lullabot/copelandia</li>
-          <li>http://copelandia.lulladev.com</li>
-        </ul>
-        <br />
-        <div>For Drupal 8, just enable the REST module and tada!</div>
-        <br /><br />
-        <div>* or restws or Views Datasource or a custom output</div>
+        <section>
+          <h2>The CMS</h2>
+          <h3>Drupal 7 + Services* + OAuth</h3>
+          <ul>
+            <li>https://github.com/Lullabot/copelandia</li>
+            <li>http://copelandia.lulladev.com</li>
+          </ul>
+          <br />
+          <div>For Drupal 8, just enable the REST module and tada!</div>
+          <br /><br />
+          <div>* or restws or Views Datasource or a custom output</div>
+        </section>
+        <section>
+          <h2>Authentication</h2>
+          <p align="left">Needed when...</p>
+          <ul>
+            <li>The data you are exposing is private</li>
+            <li>You allow clients to alter data through the API</li>
+          </ul>
+          <img src="/images/oauth.png" style="height: 525px;">
+        </section>
       </section>
       <section>
         <h2>Symfony2 client</h2>
@@ -129,7 +140,6 @@
       <section>
         <h2>Tips for Building APIs</h2>
         <ul>
-          <li>Use version numbers e.g. /api/1.0/recipes.json</li>
           <li>Don't expose raw Drupal field names as keys</li>
           <li>Don't settle for a bad data structure because it's the default views datasource/services output</li>
           <li>Stay consistent e.g. key naming is the same across different resources for the same field</li>
