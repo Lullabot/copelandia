@@ -108,6 +108,14 @@
           <div>* or CreateAPI or restws or Views Datasource or a custom output</div>
         </section>
         <section>
+          <h2>Same Origin Policy</h2>
+          <div>By default, you cannot use JSON feeds from different domains e.g. example.com cannot use a feed from example2.com</div>
+          <ul>
+            <li>JSONP</li>
+            <li>CORS - http://drupal.org/project/cors</li>
+          </ul>
+        </section>
+        <section>
           <h2>Authentication</h2>
           <p align="left">Needed when...</p>
           <ul>
@@ -148,11 +156,12 @@
         </div>
       </section>
       <section>
-        <h2>Tips for Building APIs</h2>
+        <h2>Simple Tips for Building APIs</h2>
         <ul>
+          <li>Use version numbers in your URLs e.g. /api/1.0/recipes.json</li>
           <li>Don't expose raw Drupal field names as keys</li>
           <li>Don't settle for a bad data structure because it's the default views datasource/services output</li>
-          <li>Stay consistent e.g. key naming is the same across different resources for the same field</li>
+          <li>Stay consistent with key naming</li>
           <li>Try to just expose your data and not process it. This is the job of your clients</li>
           <li>Read this book! APIs: A Strategy Guide <a href="http://shop.oreilly.com/product/0636920021223.do">http://shop.oreilly.com/product/0636920021223.do</a></li>
         </ul>
