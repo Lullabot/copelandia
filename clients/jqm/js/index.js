@@ -20,11 +20,12 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        var nid = 0;
 
         $.getJSON('http://copelandia.lulladev.com/node.json')
           .done(function(data) {
             $.each(data.list, function(i, item) {
-              $('a', '<li><a /></li>').text(item.title).attr('href', '#').parent().appendTo('ul.recipes')
+              $('a', '<li><a/></li>').text(item.title).attr('href', '#recipe').attr('data-nid', item.nid).parent().appendTo('ul.recipes');
             });
             var mylist = $('ul.recipes');
             var listitems = mylist.children('li').get();
@@ -33,8 +34,24 @@ var app = {
             })
             $.each(listitems, function(idx, itm) { mylist.append(itm); });
             $('ul.recipes').listview('refresh');
+            $('ul.recipes a').click(function() {
+              nid = $(this).data('nid');
+              $.getJSON('http://copelandia.lulladev.com/node.json?nid=' + nid)
+                .done(function(data) {
+                  $.each(data.list, function(i, item) {
+                    $('.recipe-title').text(item.title);
+                    $('.recipe-description').html(item.body.value);
+                    $('.recipe-cook').text(item.field_recipe_cook_time);
+                    $('.recipe-instructions').html(item.field_recipe_instructions.value);
+                    $('.recipe-prep').text(item.field_recipe_prep_time);
+                    $('.recipe-servings').text(item.field_recipe_servings);
+                  });
+              });
+
+            });
           });
-    },
+
+            },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
