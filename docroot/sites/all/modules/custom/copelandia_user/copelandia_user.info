@@ -1,0 +1,4 @@
+name = Copelandia User
+description = User hooks for copelandia.
+package = Copelandia
+core = 7.x
