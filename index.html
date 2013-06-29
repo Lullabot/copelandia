@@ -15,7 +15,9 @@
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/copelandia.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -47,33 +49,14 @@
             <img height="250" src="images/justafish.jpg" alt="justafish" style="background: none; border: 0; box-shadow: none;" />
           </section>
           <section>
-              <h2>Introduction</h2>
-      <div style="text-align: left; ">
-              <br>
-          </div>
-      <div style="text-align: left; ">Meet @daniel_jacobson, ex App Development Director at http://www.npr.org</div>
-      <div style="text-align: left; ">
-          <br>
-      </div>
-      <div style="text-align: left; ">Built a strong API which could be consumed by a long list of clients</div>
-      <div style="text-align: left; ">
-      <span>
-          <br>
-      </span>
-      </div>
-      <div style="text-align: left; ">
-      <span>The National Public Radio's CMS has been working since more than 10 years ago!</span>
-      </div>
-      <div style="text-align: right;">
-      <div>
-      <span style="font-size: 18.328445434570313px; font-style: normal; font-variant: normal;">
-          <br>
-      </span>
-      </div>
-      <div>
-      <span style="font-size: 18.328445434570313px; font-style: normal; font-variant: normal;">http://blog.programmableweb.com/2009/10/13/cope-create-once-publish-everywhere</span>
-      <br>
-      </div>
+            <h2>Introduction</h2>
+            <ul>
+              <li>Meet @daniel_jacobson, ex App Development Director at http://www.npr.org</li>
+              <li>Built a strong API which could be consumed by a long list of clients</li>
+              <li>The National Public Radio's CMS has been working since more than 10 years ago!</li>
+            </ul>
+        <div>
+          <span style="font-size: 18.328445434570313px; font-style: normal; font-variant: normal;">http://blog.programmableweb.com/2009/10/13/cope-create-once-publish-everywhere</span>
       </div>
       </section>
       <section>
@@ -84,112 +67,75 @@
       </div>
       </section>
       <section>
-          <h2>Benefits</h2>
-      <div>
-          <br>
-      </div>
-      <div class="fragment" data-fragment-index="0">
-      <ul>
-      </ul>
-      <span style="text-align: left;">Easier to upgrade front and backends separately.</span>
-      </div>
-      <div>
-      <span style="text-align: left;">
-          <br>
-      </span>
-      </div>
-      <div class="fragment" data-fragment-index="1">
-      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
-      <ul>
-      </ul>
-      <span style="text-align: left;">Makes frontend work fun again!</span>
-      </div>
-      <div>
-      <span style="text-align: left;">
-          <br>
-      </span>
-      </div>
-      <div class="fragment" data-fragment-index="2">
-      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
-      <span style="text-align: left;">Backend focus just on having a good content model</span>
-      </div>
-      <div>
-      <span style="text-align: left;">
-          <br>
-      </span>
-      </div>
-      <div class="fragment" data-fragment-index="3">
-      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
-      <ul>
-          </ul>
-      <span style="text-align: left;">Performance</span>
-          <br>
-      </div>
+        <h2>Benefits</h2>
+        <ul>
+          <li>Easier to upgrade front and backends separately.</li>
+          <li>Makes frontend work fun again!</li>
+          <li>Backend focuses on just having a good content model</li>
+          <li>Performance</li>
+        </ul>
       </section>
       <section>
-          <h2>cons</h2>
-      <div>
-          <br>
-      </div>
-      <div>Not applicable to all sort of projects</div>
-      <div>
-      <br>
-      </div>
-      <div>No Views module</div>
-      <div>
-      <br>
-      </div>
-      <div>A considerable amount of time is need for the first project</div>
-      <div>
-      <br>
-      </div>
-      <div>...</div>
+        <h2>Drawbacks</h2>
+        <ul>
+          <li>Not applicable to all sort of projects</li>
+          <li>No Views module (not necessarily a drawback :) )</li>
+          <li>A considerable amount of time is needed for the first project</li>
+        </ul>
       </section>
       <section>
-          <h2>Server</h2>
-      <div>
-          <br>
-      </div>
-      <h3>
-      <br>
-      </h3>
-      <div>Drupal 7 + Services + OAuth</div>
-      <div>
-      <br>
-      </div>
-      <div>
-          <div>https://github.com/Lullabot/copelandia</div>
-          <div>http://copelandia.lulladev.com</div>
-      </div>
-      <div>
-          <br>
-      </div>
-      <div>
-          <br>
-      </div>
-      <div>For Drupal 8, just enable REST module and</div>
+        <h2>The CMS</h2>
+        <h3>Drupal 7 + Services* + OAuth</h3>
+        <ul>
+          <li>https://github.com/Lullabot/copelandia</li>
+          <li>http://copelandia.lulladev.com</li>
+        </ul>
+        <br />
+        <div>For Drupal 8, just enable the REST module and tada!</div>
+        <br /><br />
+        <div>* or restws or Views Datasource or a custom output</div>
       </section>
       <section>
-          <h2>Symfony2 client</h2>
+        <h2>Symfony2 client</h2>
+        <div>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div>
+            <a href="http://copesf.lulladev.com">http://copesf.lulladev.com</a>
+            <br>
+        </div>
+        <div>
+            <a href="https://github.com/Lullabot/copelandia-symfony">https://github.com/Lullabot/copelandia-symfony</a>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div>TODO</div>
+        <div>Use restws and services_entity instead of services (depending on OAuth support)</div>
+      </section>
+      <section>
+        <h2>jQuery Mobile Client</h2>
+        <div>
+          <a href="https://github.com/Lullabot/copelandia/tree/master/clients/jqm">https://github.com/Lullabot/copelandia/tree/master/clients/jqm</a>
           <div>
-              <br>
+            Can utilise phone features using <a href="http://cordova.apache.org/">http://cordova.apache.org/</a>
           </div>
-          <div>
-              <br>
-          </div>
-          <div>
-              <a href="http://copesf.lulladev.com">http://copesf.lulladev.com</a>
-              <br>
-          </div>
-          <div>
-              <a href="https://github.com/Lullabot/copelandia-symfony">https://github.com/Lullabot/copelandia-symfony</a>
-              <br>
-          </div>
-          <div>
-              <br>
-          </div>
-          <div>TODO</div>
-          <div>Use restws and services_entity instead of services (depending on OAuth support)</div>
+        </div>
+      </section>
+      <section>
+        <h2>Tips for Building APIs</h2>
+        <ul>
+          <li>Use version numbers e.g. /api/1.0/recipes.json</li>
+          <li>Don't expose raw Drupal field names as keys</li>
+          <li>Don't settle for a bad data structure because it's the default views datasource/services output</li>
+          <li>Stay consistent e.g. key naming is the same across different resources for the same field</li>
+          <li>Try to just expose your data and not process it. This is the job of your clients</li>
+          <li>Read this book! APIs: A Strategy Guide <a href="http://shop.oreilly.com/product/0636920021223.do">http://shop.oreilly.com/product/0636920021223.do</a></li>
+        </ul>
       </section>
       <section>
           <h2>Thanks! Questions?</h2>
