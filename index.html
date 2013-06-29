@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+          <section>
+              <h1>Decoupling Drupal and Consuming with Symfony2, JavaScript or Unicorns</h1>
+      <div>Drupal Developer Days Dublin</div>
+      <div>June 2013</div>
+      <div>@juampy &amp; @justafish</div>
+          </section>
+          <section>
+              <h2>About the presenters</h2>
+          </section>
+          <section>
+              <h2>Introduction</h2>
+      <div style="text-align: left; ">
+              <br>
+          </div>
+      <div style="text-align: left; ">Meet @daniel_jacobson, ex App Development Director at http://www.npr.org</div>
+      <div style="text-align: left; ">
+          <br>
+      </div>
+      <div style="text-align: left; ">Built a strong API which could be consumed by a long list of clients</div>
+      <div style="text-align: left; ">
+      <span>
+          <br>
+      </span>
+      </div>
+      <div style="text-align: left; ">
+      <span>The National Public Radio's CMS has been working since more than 10 years ago!</span>
+      </div>
+      <div style="text-align: right;">
+      <div>
+      <span style="font-size: 18.328445434570313px; font-style: normal; font-variant: normal;">
+          <br>
+      </span>
+      </div>
+      <div>
+      <span style="font-size: 18.328445434570313px; font-style: normal; font-variant: normal;">http://blog.programmableweb.com/2009/10/13/cope-create-once-publish-everywhere</span>
+      <br>
+      </div>
+      </div>
+      </section>
+      <section>
+          <h2>create once, publish everywhere</h2>
+      <div>
+      <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/juanpablonovillo/images/40071/why_need_services.png" style="height: 525px;">
+          <br>
+      </div>
+      </section>
+      <section>
+          <h2>Benefits</h2>
+      <div>
+          <br>
+      </div>
+      <div class="fragment" data-fragment-index="0">
+      <ul>
+      </ul>
+      <span style="text-align: left;">Easier to upgrade front and backends separately.</span>
+      </div>
+      <div>
+      <span style="text-align: left;">
+          <br>
+      </span>
+      </div>
+      <div class="fragment" data-fragment-index="1">
+      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
+      <ul>
+      </ul>
+      <span style="text-align: left;">Makes frontend work fun again!</span>
+      </div>
+      <div>
+      <span style="text-align: left;">
+          <br>
+      </span>
+      </div>
+      <div class="fragment" data-fragment-index="2">
+      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
+      <span style="text-align: left;">Backend focus just on having a good content model</span>
+      </div>
+      <div>
+      <span style="text-align: left;">
+          <br>
+      </span>
+      </div>
+      <div class="fragment" data-fragment-index="3">
+      <br style="font-family: inherit; font-style: inherit; font-variant: inherit; text-align: left;">
+      <ul>
+          </ul>
+      <span style="text-align: left;">Performance</span>
+          <br>
+      </div>
+      </section>
+      <section>
+          <h2>cons</h2>
+      <div>
+          <br>
+      </div>
+      <div>Not applicable to all sort of projects</div>
+      <div>
+      <br>
+      </div>
+      <div>No Views module</div>
+      <div>
+      <br>
+      </div>
+      <div>A considerable amount of time is need for the first project</div>
+      <div>
+      <br>
+      </div>
+      <div>...</div>
+      </section>
+      <section>
+          <h2>Server</h2>
+      <div>
+          <br>
+      </div>
+      <h3>
+      <br>
+      </h3>
+      <div>Drupal 7 + Services + OAuth</div>
+      <div>
+      <br>
+      </div>
+      <div>
+          <div>https://github.com/Lullabot/copelandia</div>
+          <div>http://copelandia.lulladev.com</div>
+      </div>
+      <div>
+          <br>
+      </div>
+      <div>
+          <br>
+      </div>
+      <div>For Drupal 8, just enable REST module and</div>
+      </section>
+      <section>
+          <h2>Symfony2 client</h2>
+          <div>
+              <br>
+          </div>
+          <div>
+              <br>
+          </div>
+          <div>
+              <a href="http://copesf.lulladev.com">http://copesf.lulladev.com</a>
+              <br>
+          </div>
+          <div>
+              <a href="https://github.com/Lullabot/copelandia-symfony">https://github.com/Lullabot/copelandia-symfony</a>
+              <br>
+          </div>
+          <div>
+              <br>
+          </div>
+          <div>TODO</div>
+          <div>Use restws and services_entity instead of services (depending on OAuth support)</div>
+      </section>
+      <section>
+          <h2>Thanks! Questions?</h2>
+          <div>
+              <br>
+          </div>
+          <div>
+              <br>
+          </div>
+          <div>
+              <br>
+          </div>
+          <div style="text-align: center;">@juampy72</div>
+          <div style="text-align: center;">about.me/juampy</div>
+          <div style="text-align: center;">
+              <br>
+          </div>
+          <div style="text-align: center;">@justafish</div>
+          <div style="text-align: center;">---------</div>
+      </section>
+      <section>
+          <h2>resources</h2>
+          <div style="text-align: left; ">
+              <div>
+                  <font style="font-size: 18px;">http://insready.com/en/blog/android-drupal-marriage</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://www.slideshare.net/zachbrand/npr-api-create-once-publish-everywhere</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://www.lullabot.com/blog/articles/deblobbing-your-chunks-building-flexible-content-model</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://blog.programmableweb.com/2009/10/13/cope-create-once-publish-everywhere/</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">https://docs.google.com/presentation/d/1_R53yG0SUFhwSLxEF-G955IaeqlWDHYwhANJRSI_Q-I/edit#slide=id.g477ac8b1_2_75</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://shop.oreilly.com/product/0636920021223.do?sortby=publicationDate</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://www.lullabot.com/blog/podcasts/insert-content-here-episode-11-daniel-jacobson-nprs-cope-and-content-apis</font>
+              </div>
+              <div>
+                  <font style="font-size: 18px;">http://linclark.github.io/rest-portland2013</font>
+              </div>
+              <div>
+                  <br>
+              </div>
+          </div>
+      </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
