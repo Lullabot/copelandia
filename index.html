@@ -104,6 +104,7 @@
         </ul>
       </section>
       <section>
+        <section>
           <h2>The CMS</h2>
           <h3>Drupal 7 + Services* + OAuth</h3>
           <ul>
@@ -116,35 +117,116 @@
           <div>* or CreateAPI or restws or Views Datasource or a custom output</div>
         </section>
         <section>
-          <h2>Authentication</h2>
-          <p align="left">Needed when...</p>
-          <ul>
-            <li>The data you are exposing is private</li>
-            <li>You allow clients to alter data through the API</li>
-          </ul>
+          <h2>OAuth setup</h2>
           <img src="images/oauth.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Server auth</h2>
+          <img src="images/services_auth.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Endpoint auth</h2>
+          <img src="images/endpoint_auth.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Client creation</h2>
+          <img src="images/user_role.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Client access keys</h2>
+          <img src="images/client_keys.png" style="height: 525px;">
+        </section>
       </section>
       <section>
-        <h2>Symfony2 client</h2>
-        <div>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>
-            <a href="http://copesf.lulladev.com">http://copesf.lulladev.com</a>
-            <br>
-        </div>
-        <div>
-            <a href="https://github.com/Lullabot/copelandia-symfony">https://github.com/Lullabot/copelandia-symfony</a>
-            <br>
-        </div>
-        <div>
-            <br>
-        </div>
-        <div>TODO</div>
-        <div>Use restws and services_entity instead of services (depending on OAuth support)</div>
+        <section>
+          <h2>Symfony2 client</h2>
+          <div>
+              <br>
+          </div>
+          <div>
+              <br>
+          </div>
+          <div>
+              <a href="http://copesf.lulladev.com">http://copesf.lulladev.com</a>
+              <br>
+          </div>
+          <div>
+              <a href="https://github.com/Lullabot/copelandia-symfony">https://github.com/Lullabot/copelandia-symfony</a>
+              <br>
+          </div>
+        </section>
+        <section>
+          <h2>Homepage</h2>
+          <img src="images/copelandiasf_home.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Homepage controller</h2>
+          <pre><code data-trim contenteditable>
+class DefaultController extends Controller
+{
+  public function indexAction()
+  {
+    $client = new Client($this->container-> getParameter('backend_host'));
+    $request = $client->get('/node.json');
+    $response = $request->send()->json();
+
+    $recipes = array();
+    foreach ($response['list'] as $recipe) {
+      $recipes[] = $recipe;
+    }
+    return $this->render('LullabotRecipeBundle:Default:index.html.twig',
+    
+      array('recipes' => $recipes));
+          </code></pre>
+        </section>
+        <section>
+          <h2>Homepage template</h2>
+          <pre><code data-trim contenteditable>
+{% extends '::base.html.twig' %}
+
+{% block body %}
+  <ul>
+    {% for recipe in recipes %}
+      <li>
+        <a href="{{ path('lullabot_recipe_show', {'id': recipe.nid}) }}">
+          {{ recipe.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+          </code></pre>
+        </section>
+        <section>
+          <h2>Submit recipe</h2>
+          <img src="images/submit_recipe.png" style="height: 525px;">
+        </section>
+        <section>
+          <h2>Submit recipe controller</h2>
+          <pre><code data-trim contenteditable>
+  $form = $this->createFormBuilder()
+    ->add('title', 'text')
+    ->add('body', 'textarea')
+    ->add('prep_time', 'integer')
+    ->getForm();
+
+  if ($request->isMethod('POST')) {
+    $form->bind($request);
+    if ($form->isValid()) {
+      $data = $form->getData();
+      $client = new Client($this->container->getParameter('backend_host'));
+      $client->addSubscriber(new OauthPlugin(array(
+        'consumer_key'  => $this->container->getParameter('oauth_consumer_key'),
+        'consumer_secret' => $this->container->getParameter('oauth_consumer_secret'),
+      )));
+      $request = $client->post('/api/node', null, array(
+        'title' => $data['title'],
+        'body' => array('und' => array(array('value' => $data['body']))),
+        'field_recipe_prep_time' => array('und' => array(array('value' => $data['prep_time']))),
+        'type' => 'recipe'
+      ));
+          </code></pre>
+        </section>
       </section>
       <section>
         <h2>jQuery Mobile Client</h2>
@@ -191,7 +273,6 @@
               <br>
           </div>
           <div style="text-align: center;">@justafish</div>
-          <div style="text-align: center;">---------</div>
       </section>
       <section>
           <h2>resources</h2>
