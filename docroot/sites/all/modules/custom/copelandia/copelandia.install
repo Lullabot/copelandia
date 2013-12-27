@@ -5,6 +5,16 @@
  * Install, update and uninstall functions for copelandia module.
  */
 
+
+function copelandia_install() {
+    if(module_exists('toolbar')){
+        module_disable(array('toolbar'));
+    }
+
+    if(module_exists('overlay')){
+        module_disable(array('overlay'));
+    }
+}
 /**
  * Implements hook_update_N()
  *
